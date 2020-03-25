@@ -1,0 +1,33 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+line-height: 1.5;
+padding: 0px;
+background-color: #ffffff;
+}
+
+.container_col_gray1{
+  width:70%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #A9A9A9;
+}
+
+.container_col_gray2{
+  width:70%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.container_col{
+  width:70%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
