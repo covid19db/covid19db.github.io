@@ -31,3 +31,77 @@ background-color: #ffffff;
   margin-bottom: 10px;
   overflow: hidden;
 }
+
+.container2{
+  width:70%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  background:#002147
+}
+
+header ul{
+margin:0;
+padding:0;
+}
+
+header a{
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 15px;
+}
+
+header li{
+  padding: 5px;
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+
+header #logo_left{
+  padding-bottom: 0px;
+  background-color: #ffffff;
+  float: left;
+}
+
+header #logo_right{
+  padding-bottom: 0px;
+  background-color: #ffffff;
+  float:right;
+}
+
+header #logo_right img{
+  width: 130px;
+}
+
+header #logo_left img{
+  margin-top: 30px;
+  width: 230px;
+}
+
+header nav{
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px
+}
+
+header #branding{
+  float: left;
+}
+
+header #branding h1{
+  margin: 0;
+}
+
+header .highlight, header .current a{
+  color: #f4f4f4;
+  font-weight: bold;
+}
+
+header a:hover{
+  color: #cccccc;
+  font-weight: bold;
+}
