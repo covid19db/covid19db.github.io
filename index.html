@@ -5,16 +5,12 @@
   <title>Covid-19 DB Project| Welcome</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 
 <body>
-
   <header>
     <div class="container2">
       <nav>
@@ -27,35 +23,152 @@
     </div>
   </header>
 
+  <div class="container_col_gray1"><center><h2>Covid-19 DB Project</center></h2></div>
 
 
-    <div class="container_col_gray1"><center><h2>Covid-19 DB Project</center></h2></div>
+  <div class="container_col_gray2"></br><strong>OBJECTIVE:</strong> </div>
+  <div class="container_col">
+    In response to the current coronavirus outbreak, we are
+    creating a comprehensive, publicly available database of the severe acute respiratory
+    syndrome coronavirus 2 (SARS-CoV-2)
+    that causes coronavirus disease (COVID-19). He hope this would be useful to create detailed visualisation tools,
+    build a model of the global spread of the virus and potentially inform adequate public policy.
+  </div>
+
+  <div class="container_col_gray2"></br><strong>WHAT DATA DO WE HAVE?</strong> </div>
+  <div class="container_col">
+    <p>
+      So far, have collected the data from the following sources:
+    </p>
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>Source</th>
+        <th>Source code</th>
+        <th>Granularity</th>
+        <th>Statistics</th>
+      </tr>
+      <tr>
+        <td>World</td>
+        <td>Data collected by <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins from WHO reports</a></td>
+        <td>WRD-JHWHO</td>
+        <td>Mostly country-wise, sometimes includes states or provinces</td>
+        <td>infected, recovered, dead</td>
+      </tr>
+      <tr>
+        <td>Italy</td>
+        <td>Data collected by <a href="https://github.com/DavideMagno/ItalianCovidData">Davide Mango from Protezione Civile</a></td>
+        <td>ITA-DMPC</td>
+        <td>Italian regions</td>
+        <td>tested, infected, hospitalised, in ICU, quarantined, recovered, dead</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container_col_gray2"></br><strong>HOW CAN I USE THE DATABASE?</strong></div>
+  <div class="container_col">
+    <p>You can connect to our PostgreSQL instance using this IP address: and this, read-only, user:</p>
+    <p>Currently, the schema includes only one table, <b>infections</b>, with the following columns:</p>
+    <ul>
+      <li>
+        source: code describing the source of information. See table above.
+      </li>
+      <li>
+        date: day of the statistics.
+      </li>
+      <li>
+        country: English name for the country.
+      </li>
+      <li>
+        countrycode: ISO ALpha-3 code of the country.
+      </li>
+      <li>
+        l1region: (optional) wide-area administrative or geographical region
+        within the country, for example a "state" within United States, a
+        "province" within China or Canada.
+      </li>
+      <li>
+        l2region: (optional) mid-area region within a country or a l1region, for
+        example an Italian "region", a UK "county"
+      </li>
+      <li>
+        l3region: (optional) a small-area region within the country or the l2region,
+        for example an italian "province".
+      </li>
+      <li>
+        city: (optional) a city, town or village.
+      </li>
+      <li>
+        tested: (optional) number of people tested. Cumulative.
+      </li>
+      <li>
+        infected: (optional) number of people who has been confirmed as infected.
+        Cumulative.
+      </li>
+      <li>
+        recovered: (optional) number of people who has been infected and has
+        healed. Cumulative.
+      </li>
+      <li>
+        hospitalised: (optional) number of people who has been infected and has
+        been hospitalised. Cumulative.
+      </li>
+      <li>
+        hospitalised_icu: (optional) number of people who has been infected and has
+        been hospitalised and had to be put in intensive care. Cumulative.
+      </li>
+      <li>
+        homequarantined: (optional) number of people who has been infected and has
+        been quarantined in home. Cumulative.
+      </li>
+    </ul>
+
+    <p>
+      We collect the data as they come from the data sources, we do not check for
+      their consinsentcy nor correctness. It is possible that different sources
+      provide slighlty different statistics.
+    </p>
+
+    <p>
+      Warning: the dattabase is being built and it is likely that the
+      datastructure will change, check this webpage regularly to be notified about
+      changes.
+    </p>
+  </div>
 
 
-    <div class="container_col_gray2"></br><p><strong>OBJECTIVE:</strong> </div>
-    <div class="container_col">
-      In response to the current coronavirus outbreak, we are
-        creating a comprehensive, publicly available database of the severe acute respiratory
-        syndrome coronavirus 2 (SARS-CoV-2)
-        that causes coronavirus disease (COVID-19). He hope this would be useful to create detailed visualisation tools,
-        build a model of the global spread of the virus and potentially inform adequate public policy.<p>
-    </div>
+  <div class="container_col_gray2"></br><strong>HOW CAN YOU HELP?</strong> </div>
+  <div class="container_col">
+    <p>
+      We need your help! There are two ways you can help:
+      <ul>
+        <li>
+          If you are a developer, we need to develop "fetchers" that collect data
+          from machine-readable official sources and feed them into the database
+          every day.
+        </li>
+        <li>
+          If you are a clinician or work for a health authority, we need access
+          to machine-readable statistics, like Excel sheets, CSV files, APIs etc.
+        </li>
+      </ul>
+      If you would like to help, please get in touch: <b>adam.mahdi@eng.ox.ac.uk</b>
+    </p>
+  </div>
+
+  <div class="container_col_gray2"></br><strong>WHO ARE WE?</strong> </div>
+  <div class="container_col">
+    <p>
+      This project is coordinated by the University of Oxford with the technical help
+      of the University of Malmö.
+    </p>
+  </div>
 
 
-
-      <div class="container_col_gray2"></br><p><strong>HOW CAN YOU HELP?</strong> </div>
-            <div class="container_col">
-              <p>The project is coordinated by researchers from the <b>Universit of Oxford</b>, however contributions from
-              around the world are welcome and much appreciated. If you would like to help, please get in touch: <b>adam.mahdi@eng.ox.ac.uk</b></p>
-            </div>
-
-            <div class="container_col_gray2"></br><p><strong>HOW TO USE THE DATABASE?</strong> </div>
-                  <div class="container_col">
-                    <p>Coming soon... stay tuned...</p>
-                  </div>
-
+  <!-- ADAM: REMOVE THIS, IT'S CONFUSING -->
   <div class="container_col_gray2">
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=tt&d=V0C1yGjNrHUiZvwm2HgrBd05n_h64CAqyps7RaYcfGU&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script></div>
+    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=tt&d=V0C1yGjNrHUiZvwm2HgrBd05n_h64CAqyps7RaYcfGU&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
+  </div>
 </body>
 
 </html>
