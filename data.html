@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Covid-19 DB Project| Welcome</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container2">
+      <nav>
+        <ul>
+          <li class="Covid-19 Database"><a href="index.html">Covid-19 DB</a></li>
+          <li><a href="data.html">Data</a></li>
+          <li><a href="news.html">Links</a></li>
+          <li><a href="acknowledgements.html">Contribution</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container_col_gray1"><center><h2>Data</center></h2></div>
+
+  <div class="container_col_gray2"></br><strong>HOW CAN I USE THE DATABASE?</strong></div>
+
+  <div class="container_col">
+    <p>You can connect to our PostgreSQL instance using this IP address.</p>
+ </div>
+
+  <div class="container_col_gray2"></br><strong>INFECTIONS table</strong></div>
+      <div class="container_col">
+    <p>Currently, the schema includes only one table, <b>infections</b>, with the following fields:</p>
+    <ul>
+      <li>
+        SOURCE: code describing the source of information
+      </li>
+      <li>
+        DATE: day of the statistics
+      </li>
+      <li>
+        COUNTRY: English name for the country
+      </li>
+      <li>
+        COUNTRYCODE: ISO ALpha-3 code of the country.
+      </li>
+      <li>
+        L1REGION: (optional) wide-area administrative or geographical region
+        within the country. For example a "state" in the United States, a
+        "province" in China or Canada, an oversea territory like
+        Faroe Islands for Denmark or Martinique for France.
+      </li>
+      <li>
+        L2REGION: (optional) mid-area region within a country or an l1region. For
+        example a "region" in Italy or a "county" in the UK.
+      </li>
+      <li>
+        L3REGION: (optional) a small-area region within the country or the l2region,
+        for example an italian "province".
+      </li>
+      <li>
+        CITY: (optional) a city, town or village.
+      </li>
+      <li>
+        TESTED: (optional) number of people tested. Cumulative.
+      </li>
+      <li>
+        INFECTED: (optional) number of confirmed infected.
+        Cumulative.
+      </li>
+      <li>
+        RECOVERED: (optional) number of infected who have recovered. Cumulative.
+      </li>
+      <li>
+        HOSPITALISED: (optional) number of infected who have been hospitalised. Cumulative.
+      </li>
+      <li>
+        HOSPITALISED_ICU: (optional) number of infected in the intensive care. Cumulative.
+      </li>
+      <li>
+        HOMEQUARANTINED: (optional) number of infected with home quarantine. Cumulative.
+      </li>
+    </ul>
+
+    <p>
+      <b>Note 1:</b> We collect the data as they come from the data sources, we do not check for
+      their consinsentcy nor correctness. It is possible that different sources
+      provide slighlty different statistics.
+    </p>
+
+    <p>
+      <b>Note 2:</b> The database is being built and it is likely that the
+      datastructure will change. Check this webpage regularly to be notified about
+      changes.
+    </p>
+  </div>
+
+  <div class="container_col_gray2"></br><strong>DATA SOURCES</strong> </div>
+  <div class="container_col">
+    <p>
+      So far, we have used the following sources:
+    </p>
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>Source</th>
+        <th>Source code</th>
+        <th>Granularity</th>
+        <th>Statistics</th>
+      </tr>
+      <tr>
+        <td>World</td>
+        <td>Data collected by <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins from WHO reports</a></td>
+        <td>WRD-JHWHO</td>
+        <td>Mostly country-wise, sometimes includes states, provinces or oversea territories</td>
+        <td>infected, recovered, dead</td>
+      </tr>
+      <tr>
+        <td>Italy</td>
+        <td>Data collected by <a href="https://github.com/DavideMagno/ItalianCovidData">Davide Mango from Protezione Civile</a></td>
+        <td>ITA-DMPC</td>
+        <td>Italian regions</td>
+        <td>tested, infected, hospitalised, in ICU, quarantined, recovered, dead</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>
