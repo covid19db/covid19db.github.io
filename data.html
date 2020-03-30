@@ -26,61 +26,62 @@
   <div class="container_col_gray1"><center><h2>Data</center></h2></div>
 
   <div class="container_col_gray2"></br><strong>HOW CAN I USE THE DATABASE?</strong></div>
+
   <div class="container_col">
-    <p>You can connect to our PostgreSQL instance using this IP address: and this, read-only, user:</p>
+    <p>You can connect to our PostgreSQL instance using this IP address.</p>
+ </div>
+
+  <div class="container_col_gray2"></br><strong>INFECTIONS table</strong></div>
+      <div class="container_col">
     <p>Currently, the schema includes only one table, <b>infections</b>, with the following fields:</p>
     <ul>
       <li>
-        source: code describing the source of information.
+        SOURCE: code describing the source of information
       </li>
       <li>
-        date: day of the statistics.
+        DATE: day of the statistics
       </li>
       <li>
-        country: English name for the country.
+        COUNTRY: English name for the country
       </li>
       <li>
-        countrycode: ISO ALpha-3 code of the country.
+        COUNTRYCODE: ISO ALpha-3 code of the country.
       </li>
       <li>
-        l1region: (optional) wide-area administrative or geographical region
-        within the country, for example a "state" within United States, a
-        "province" within China or Canada, or an oversea territory like
+        L1REGION: (optional) wide-area administrative or geographical region
+        within the country. For example a "state" in the United States, a
+        "province" in China or Canada, an oversea territory like
         Faroe Islands for Denmark or Martinique for France.
       </li>
       <li>
-        l2region: (optional) mid-area region within a country or a l1region, for
-        example an Italian "region", a UK "county"
+        L2REGION: (optional) mid-area region within a country or an l1region. For
+        example a "region" in Italy or a "county" in the UK.
       </li>
       <li>
-        l3region: (optional) a small-area region within the country or the l2region,
+        L3REGION: (optional) a small-area region within the country or the l2region,
         for example an italian "province".
       </li>
       <li>
-        city: (optional) a city, town or village.
+        CITY: (optional) a city, town or village.
       </li>
       <li>
-        tested: (optional) number of people tested. Cumulative.
+        TESTED: (optional) number of people tested. Cumulative.
       </li>
       <li>
-        infected: (optional) number of people who has been confirmed as infected.
+        INFECTED: (optional) number of confirmed infected.
         Cumulative.
       </li>
       <li>
-        recovered: (optional) number of people who has been infected and has
-        healed. Cumulative.
+        RECOVERED: (optional) number of infected who have recovered. Cumulative.
       </li>
       <li>
-        hospitalised: (optional) number of people who has been infected and has
-        been hospitalised. Cumulative.
+        HOSPITALISED: (optional) number of infected who have been hospitalised. Cumulative.
       </li>
       <li>
-        hospitalised_icu: (optional) number of people who has been infected and has
-        been hospitalised and had to be put in intensive care. Cumulative.
+        HOSPITALISED_ICU: (optional) number of infected in the intensive care. Cumulative.
       </li>
       <li>
-        homequarantined: (optional) number of people who has been infected and has
-        been quarantined in home. Cumulative.
+        HOMEQUARANTINED: (optional) number of infected with home quarantine. Cumulative.
       </li>
     </ul>
 
