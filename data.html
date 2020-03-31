@@ -48,30 +48,32 @@
         COUNTRYCODE: ISO alpha-3 code of the country.
       </li>
       <li>
-        ADM_AREA_1: First-level administrative country subdivision
-      <li>
-        ADM_AREA_2: Second-level administrative country subdivision
+        ADM_AREA_1: First-level administrative country subdivision. For example a "state" in the United States, a
+        "province" in China, Faroe Islands for Denmark or Martinique for France.
       </li>
       <li>
-        ADM_AREA_3: Third-level administrative country subdivision
+        ADM_AREA_2: Second-level administrative country subdivision. For example a "county" in the United States.
+      </li>
+      <li>
+        ADM_AREA_3: Second-level administrative country subdivision.
       </li>
       <li>
         TESTED: (cumulative) number of people tested.
       </li>
       <li>
-        INFECTED: (cumulative) number of confirmed infected.
+        CONFIRMED: (cumulative) number of confirmed infections.
       </li>
       <li>
-        RECOVERED: (cumulative) number of infected who have recovered.
+        RECOVERED: (cumulative) number of confirmed who have recovered.
       </li>
       <li>
-        HOSPITALISED: (cumulative) number of infected who have been hospitalised.
+        HOSPITALISED:(cumulative) number of confirmed who have been hospitalised.
       </li>
       <li>
-        HOSPITALISED_ICU: (cumulative) number of infected in the intensive care.
+        HOSPITALISED_ICU: (cumulative) number of confirmed in the intensive care.
       </li>
       <li>
-        HOMEQUARANTINED: (cumulative) number of infected with home quarantine.
+        QUARANTINED: (cumulative) number of confirmed with home quarantine.
       </li>
     </ul>
 
@@ -106,21 +108,21 @@
         <td>Data collected by <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins from WHO reports</a></td>
         <td>WRD-JHWHO</td>
         <td>Mostly country-wise, sometimes includes states, provinces or oversea territories</td>
-        <td>infected, recovered, dead</td>
+        <td>confirmed, recovered, dead</td>
       </tr>
       <tr>
         <td>Italy</td>
         <td>Data collected by <a href="https://github.com/DavideMagno/ItalianCovidData">Davide Mango from Protezione Civile</a></td>
         <td>ITA-DMPC</td>
         <td>Italian regions</td>
-        <td>tested, infected, hospitalised, in ICU, quarantined, recovered, dead</td>
+        <td>tested, confirmed, hospitalised, in ICU, quarantined, recovered, dead</td>
       </tr>
       <tr>
         <td>United States</td>
         <td>Data collected by <a href="https://github.com/nytimes/covid-19-data">The New York Times</a></td>
         <td>USA-NYT</td>
         <td>Counties</td>
-        <td>infected, dead</td>
+        <td>confirmed, dead</td>
       </tr>
     </table>
   </div>
