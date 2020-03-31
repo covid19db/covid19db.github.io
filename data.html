@@ -49,40 +49,37 @@
         COUNTRYCODE: ISO ALpha-3 code of the country.
       </li>
       <li>
-        L1REGION: (optional) wide-area administrative or geographical region
+        ADM_AREA_1: (optional) wide-area administrative or geographical region
         within the country. For example a "state" in the United States, a
         "province" in China or Canada, an oversea territory like
         Faroe Islands for Denmark or Martinique for France.
       </li>
       <li>
-        L2REGION: (optional) mid-area region within a country or an l1region. For
-        example a "region" in Italy or a "county" in the UK.
+        ADM_AREA_2: (optional) mid-area region within a country or an ADM_AREA_1. For
+        example a "region" in Italy or a "county" in the UK, or a "voivodeship" in Poland.
       </li>
       <li>
-        L3REGION: (optional) a small-area region within the country or the l2region,
-        for example an italian "province".
-      </li>
-      <li>
-        CITY: (optional) a city, town or village.
+        ADM_AREA_3: (optional) a small-area region within the country or the ADM_AREA_2,
+        usually linked with a urban area, for example a city, an italian "province"
+        or a Polish "powiat".
       </li>
       <li>
         TESTED: (optional) number of people tested. Cumulative.
       </li>
       <li>
-        INFECTED: (optional) number of confirmed infected.
-        Cumulative.
+        CONFIRMED: (optional) number of confirmed infections. Cumulative.
       </li>
       <li>
-        RECOVERED: (optional) number of infected who have recovered. Cumulative.
+        RECOVERED: (optional) number of confirmed who have recovered. Cumulative.
       </li>
       <li>
-        HOSPITALISED: (optional) number of infected who have been hospitalised. Cumulative.
+        HOSPITALISED: (optional) number of confirmed who have been hospitalised. Cumulative.
       </li>
       <li>
-        HOSPITALISED_ICU: (optional) number of infected in the intensive care. Cumulative.
+        HOSPITALISED_ICU: (optional) number of confirmed in the intensive care. Cumulative.
       </li>
       <li>
-        HOMEQUARANTINED: (optional) number of infected with home quarantine. Cumulative.
+        QUARANTINED: (optional) number of confirmed with home quarantine. Cumulative.
       </li>
     </ul>
 
@@ -117,21 +114,21 @@
         <td>Data collected by <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins from WHO reports</a></td>
         <td>WRD-JHWHO</td>
         <td>Mostly country-wise, sometimes includes states, provinces or oversea territories</td>
-        <td>infected, recovered, dead</td>
+        <td>confirmed, recovered, dead</td>
       </tr>
       <tr>
         <td>Italy</td>
         <td>Data collected by <a href="https://github.com/DavideMagno/ItalianCovidData">Davide Mango from Protezione Civile</a></td>
         <td>ITA-DMPC</td>
         <td>Italian regions</td>
-        <td>tested, infected, hospitalised, in ICU, quarantined, recovered, dead</td>
+        <td>tested, confirmed, hospitalised, in ICU, quarantined, recovered, dead</td>
       </tr>
       <tr>
         <td>United States</td>
         <td>Data collected by <a href="https://github.com/nytimes/covid-19-data">The New York Times</a></td>
         <td>USA-NYT</td>
         <td>Counties</td>
-        <td>infected, dead</td>
+        <td>confirmed, dead</td>
       </tr>
     </table>
   </div>
