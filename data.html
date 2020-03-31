@@ -5,7 +5,10 @@
   <title>Covid-19 DB Project| Welcome</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -32,53 +35,92 @@
  </div>
 
   <div class="container_col_gray2"></br><strong>INFECTIONS table</strong></div>
-      <div class="container_col">
-    <p>Currently, the schema includes only one table, <b>infections</b>, with the following fields:</p>
-    <ul>
-      <li>
-        SOURCE: code describing the source of information
-      </li>
-      <li>
-        DATE: day of the statistics
-      </li>
-      <li>
-        COUNTRY: English name for the country
-      </li>
-      <li>
-        COUNTRYCODE: ISO alpha-3 code of the country.
-      </li>
-      <li>
-        ADM_AREA_1: First-level administrative country subdivision. For example a "state" in the United States, a
-        "province" in China, Faroe Islands for Denmark or Martinique for France.
-      </li>
-      <li>
-        ADM_AREA_2: Second-level administrative country subdivision. For example a "county" in the United States.
-      </li>
-      <li>
-        ADM_AREA_3: Second-level administrative country subdivision.
-      </li>
-      <li>
-        TESTED: (cumulative) number of people tested.
-      </li>
-      <li>
-        CONFIRMED: (cumulative) number of confirmed infections.
-      </li>
-      <li>
-        RECOVERED: (cumulative) number of confirmed who have recovered.
-      </li>
-      <li>
-        HOSPITALISED:(cumulative) number of confirmed who have been hospitalised.
-      </li>
-      <li>
-        HOSPITALISED_ICU: (cumulative) number of confirmed in the intensive care.
-      </li>
-      <li>
-        QUARANTINED: (cumulative) number of confirmed with home quarantine.
-      </li>
-    </ul>
 
+  <div class="container_col">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Data type</th>
+        <th scope="col">Short Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SOURCE</td>
+        <td>VARCHAR(40)</td>
+        <td>Data source</td>
+      </tr>
+      <tr>
+        <td>DATE</td>
+        <td>INT</td>
+        <td>Day of the statistics</td>
+      </tr>
+      <tr>
+        <td>COUNTRY</td>
+        <td>VARCHAR(40)</td>
+        <td>English name for the country</td>
+      </tr>
+      <tr>
+        <td>COUNTRYCODE</td>
+        <td>VARCHAR(10)</td>
+        <td>ISO alpha-3 code of the country</td>
+      </tr>
+      <tr>
+        <td>ADM_AREA_1</td>
+        <td>VARCHAR(40)</td>
+        <td>First-level administrative country subdivision</td>
+      </tr>
+      <tr>
+        <td>ADM_AREA_2</td>
+        <td>VARCHAR(40)</td>
+        <td>Second-level administrative country subdivision</td>
+      </tr>
+      <tr>
+        <td>ADM_AREA_3</td>
+        <td>VARCHAR(40)</td>
+        <td>Third-level administrative country subdivision</td>
+      </tr>
+      <tr>
+        <td>TESTED</td>
+        <td>INT</td>
+        <td>Number of people tested</td>
+      </tr>
+      <tr>
+        <td>CONFIRMED</td>
+        <td>INT</td>
+        <td>Third-level administrative country subdivision</td>
+      </tr>
+      <tr>
+        <td>RECOVERED</td>
+        <td>INT</td>
+        <td>Number of confirmed and infected who have recovered</td>
+      </tr>
+      <tr>
+        <td>HOSPITALISED</td>
+        <td>INT</td>
+        <td>Number of confirmed who are/have been hospitalised</td>
+      </tr>
+      <tr>
+        <td>HOSPITALISED_ICU</td>
+        <td>INT</td>
+        <td>Number of confirmed who are/have been in the intensive care</td>
+      </tr>
+      <tr>
+        <td>QUARANTINED</td>
+        <td>INT</td>
+        <td>Number of confirmed with home quarantine</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+
+
+  <div class="container_col">
     <p>
-      <b>Note 1:</b> We collect the data as they come from the data sources, we do not check for
+      <b>Note 1:</b> We collect the data as they come from the indicated data sources, we do not check for
       their consinsentcy nor correctness. It is possible that different sources
       provide slighlty different statistics.
     </p>
@@ -126,6 +168,9 @@
       </tr>
     </table>
   </div>
+
+
+
 
 </body>
 </html>
