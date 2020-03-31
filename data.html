@@ -5,7 +5,10 @@
   <title>Covid-19 DB Project| Welcome</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -28,63 +31,96 @@
   <div class="container_col_gray2"></br><strong>HOW CAN I USE THE DATABASE?</strong></div>
 
   <div class="container_col">
-    <p>You can connect to our PostgreSQL instance using this IP address: 51.89.225.211,
-      a read only user is: <b>covid19</b>, password: <b>covid19</b>.</p>
+    <p>Coming very soon... stay tuned...</p>
  </div>
 
   <div class="container_col_gray2"></br><strong>INFECTIONS table</strong></div>
-      <div class="container_col">
-    <p>Currently, the schema includes only one table, <b>infections</b>, with the following fields:</p>
-    <ul>
-      <li>
-        SOURCE: code describing the source of information
-      </li>
-      <li>
-        DATE: day of the statistics
-      </li>
-      <li>
-        COUNTRY: English name for the country
-      </li>
-      <li>
-        COUNTRYCODE: ISO ALpha-3 code of the country.
-      </li>
-      <li>
-        ADM_AREA_1: (optional) wide-area administrative or geographical region
-        within the country. For example a "state" in the United States, a
-        "province" in China or Canada, an oversea territory like
-        Faroe Islands for Denmark or Martinique for France.
-      </li>
-      <li>
-        ADM_AREA_2: (optional) mid-area region within a country or an ADM_AREA_1. For
-        example a "region" in Italy or a "county" in the UK, or a "voivodeship" in Poland.
-      </li>
-      <li>
-        ADM_AREA_3: (optional) a small-area region within the country or the ADM_AREA_2,
-        usually linked with a urban area, for example a city, an italian "province"
-        or a Polish "powiat".
-      </li>
-      <li>
-        TESTED: (optional) number of people tested. Cumulative.
-      </li>
-      <li>
-        CONFIRMED: (optional) number of confirmed infections. Cumulative.
-      </li>
-      <li>
-        RECOVERED: (optional) number of confirmed who have recovered. Cumulative.
-      </li>
-      <li>
-        HOSPITALISED: (optional) number of confirmed who have been hospitalised. Cumulative.
-      </li>
-      <li>
-        HOSPITALISED_ICU: (optional) number of confirmed in the intensive care. Cumulative.
-      </li>
-      <li>
-        QUARANTINED: (optional) number of confirmed with home quarantine. Cumulative.
-      </li>
-    </ul>
 
+  <div class="container_col">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Data type</th>
+        <th scope="col">Short Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SOURCE</td>
+        <td>VARCHAR(40)</td>
+        <td>Data source</td>
+      </tr>
+      <tr>
+        <td>DATE</td>
+        <td>INT</td>
+        <td>Day of the statistics</td>
+      </tr>
+      <tr>
+        <td>COUNTRY</td>
+        <td>VARCHAR(40)</td>
+        <td>English name for the country</td>
+      </tr>
+      <tr>
+        <td>COUNTRYCODE</td>
+        <td>VARCHAR(10)</td>
+        <td>ISO alpha-3 code of the country</td>
+      </tr>
+      <tr>
+        <td>ADM_AREA_1</td>
+        <td>VARCHAR(40)</td>
+        <td>First-level administrative country subdivision</td>
+      </tr>
+      <tr>
+        <td>ADM_AREA_2</td>
+        <td>VARCHAR(40)</td>
+        <td>Second-level administrative country subdivision</td>
+      </tr>
+      <tr>
+        <td>ADM_AREA_3</td>
+        <td>VARCHAR(40)</td>
+        <td>Third-level administrative country subdivision</td>
+      </tr>
+      <tr>
+        <td>TESTED</td>
+        <td>INT</td>
+        <td>Number of people tested</td>
+      </tr>
+      <tr>
+        <td>CONFIRMED</td>
+        <td>INT</td>
+        <td>Third-level administrative country subdivision</td>
+      </tr>
+      <tr>
+        <td>RECOVERED</td>
+        <td>INT</td>
+        <td>Number of confirmed and infected who have recovered</td>
+      </tr>
+      <tr>
+        <td>HOSPITALISED</td>
+        <td>INT</td>
+        <td>Number of confirmed who are/have been hospitalised</td>
+      </tr>
+      <tr>
+        <td>HOSPITALISED_ICU</td>
+        <td>INT</td>
+        <td>Number of confirmed who are/have been in the intensive care</td>
+      </tr>
+      <tr>
+        <td>QUARANTINED</td>
+        <td>INT</td>
+        <td>Number of confirmed with home quarantine</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+
+
+  <div class="container_col">
     <p>
-      <b>Note 1:</b> We collect the data as they come from the data sources, we do not check for
+      <b>Note 1:</b> We collect the data as they come from the indicated data sources, we do not check for
       their consinsentcy nor correctness. It is possible that different sources
       provide slighlty different statistics.
     </p>
@@ -132,6 +168,9 @@
       </tr>
     </table>
   </div>
+
+
+
 
 </body>
 </html>
