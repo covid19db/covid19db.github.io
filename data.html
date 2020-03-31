@@ -28,8 +28,7 @@
   <div class="container_col_gray2"></br><strong>HOW CAN I USE THE DATABASE?</strong></div>
 
   <div class="container_col">
-    <p>You can connect to our PostgreSQL instance using this IP address: 51.89.225.211,
-      a read only user is: <b>covid19</b>, password: <b>covid19</b>.</p>
+    <p>Coming very soon... stay tuned...</p>
  </div>
 
   <div class="container_col_gray2"></br><strong>INFECTIONS table</strong></div>
@@ -46,43 +45,33 @@
         COUNTRY: English name for the country
       </li>
       <li>
-        COUNTRYCODE: ISO ALpha-3 code of the country.
+        COUNTRYCODE: ISO alpha-3 code of the country.
       </li>
       <li>
-        L1REGION: (optional) wide-area administrative or geographical region
-        within the country. For example a "state" in the United States, a
-        "province" in China or Canada, an oversea territory like
-        Faroe Islands for Denmark or Martinique for France.
+        ADM_AREA_1: First-level administrative country subdivision
+      <li>
+        ADM_AREA_2: Second-level administrative country subdivision
       </li>
       <li>
-        L2REGION: (optional) mid-area region within a country or an l1region. For
-        example a "region" in Italy or a "county" in the UK.
+        ADM_AREA_3: Third-level administrative country subdivision
       </li>
       <li>
-        L3REGION: (optional) a small-area region within the country or the l2region,
-        for example an italian "province".
+        TESTED: (cumulative) number of people tested.
       </li>
       <li>
-        CITY: (optional) a city, town or village.
+        INFECTED: (cumulative) number of confirmed infected.
       </li>
       <li>
-        TESTED: (optional) number of people tested. Cumulative.
+        RECOVERED: (cumulative) number of infected who have recovered.
       </li>
       <li>
-        INFECTED: (optional) number of confirmed infected.
-        Cumulative.
+        HOSPITALISED: (cumulative) number of infected who have been hospitalised.
       </li>
       <li>
-        RECOVERED: (optional) number of infected who have recovered. Cumulative.
+        HOSPITALISED_ICU: (cumulative) number of infected in the intensive care.
       </li>
       <li>
-        HOSPITALISED: (optional) number of infected who have been hospitalised. Cumulative.
-      </li>
-      <li>
-        HOSPITALISED_ICU: (optional) number of infected in the intensive care. Cumulative.
-      </li>
-      <li>
-        HOMEQUARANTINED: (optional) number of infected with home quarantine. Cumulative.
+        HOMEQUARANTINED: (cumulative) number of infected with home quarantine.
       </li>
     </ul>
 
