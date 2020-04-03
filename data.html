@@ -30,10 +30,23 @@
 
   <div class="container_col_gray2"><h4><b>HOW CAN I CONNECT TO THE DATABASE?</b></h4></div>
 
+  <div class="container_col">
+    <ul>
+      <li>host='covid19db.org'</li>
+      <li>port=5432</li>
+      <li>dbname='covid19'</li>
+      <li>user='covid19'</li>
+      <li>password='covid19'</li>
+    </ul>
+  </div>
+
+
   <div class="container_col_gray2">
-    You can use, for example, the following Python code and save the data into a DataFrame (df): </br>
+    You can also use, for example, the following Python code and save the data into a DataFrame (df): </br>
+     </div>
+
+<div class="container_col_gray2">
 <code>
-</br>
 import psycopg2</br>
 import pandas as pd </br> </br>
 conn = psycopg2.connect(</br>
