@@ -30,8 +30,23 @@
 
   <div class="container_col_gray2"><h4><b>HOW CAN I USE THE DATABASE?</b></h4></div>
 
-  <div class="container_col">
-    <p>Coming very soon... stay tuned...</p>
+  <div class="container_col_gray2">
+    You can connect to our COVID19DB database using Python and use Pandas DataFrame: </br>
+<code>
+</br>
+import psycopg2</br>
+import pandas as pd </br>
+conn = psycopg2.connect(</br>
+    host='covid19db.org',</br>
+    port=5432,</br>
+    dbname='covid19',</br>
+    user='covid19',</br>
+    password='covid19'</br>
+)</br>
+cur = conn.cursor()</br>
+cur.execute("SELECT * FROM infections;")</br>
+df = pd.DataFrame(cur.fetchall(), columns=[desc[0] for desc in cur.description])</br>
+</code></br>
  </div>
 
   <div class="container_col_gray2"><h4><b>INFECTIONS table</b></h4></div>
