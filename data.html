@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -46,20 +47,23 @@
      </div>
 
 <div class="container_col_gray2">
-<code>
-import psycopg2</br>
-import pandas as pd </br> </br>
-conn = psycopg2.connect(</br>
-    host='covid19db.org',</br>
-    port=5432,</br>
-    dbname='covid19',</br>
-    user='covid19',</br>
-    password='covid19'</br>
-)</br>
-cur = conn.cursor()</br>
-cur.execute("SELECT * FROM infections;")</br>
-df = pd.DataFrame(cur.fetchall(), columns=[desc[0] for desc in cur.description])</br>
-</code></br>
+  <!-- HTML generated using hilite.me -->
+  <div style="background: #ffffff; overflow:auto;width:auto;;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+  <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">psycopg2</span>
+  <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pandas</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">pd</span>
+
+  conn <span style="color: #333333">=</span> psycopg2<span style="color: #333333">.</span>connect(
+  host<span style="color: #333333">=</span><span>&#39;covid19db.org&#39;</span>,
+  port<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5432</span>,
+  dbname<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
+  user<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
+  password<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>
+  )
+  cur <span style="color: #333333">=</span> conn<span style="color: #333333">.</span>cursor()
+  cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM infections;&quot;</span>)
+  df <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
+  </pre></div>
+
  </div>
 
   <div class="container_col_gray2"><h4><b>INFECTIONS table</b></h4></div>
