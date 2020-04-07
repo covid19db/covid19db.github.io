@@ -4,10 +4,11 @@
 <head>
   <title>Covid-19 DB Project| Welcome</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,27 +28,79 @@
     </div>
   </header>
 
-  <div class="container_col_gray1"><center><h2>Covid-19 DB Project</center></h2></div>
+  <div class="container_col_gray1"><center><h2>Understanding global impact of Covid-19 through Data Science</center></h2></div>
 
 
   <div class="container_col_gray2"><h4><b>OBJECTIVE</b></h4> </div>
-  <div class="container_col">
-    In response to the current coronavirus outbreak, we are
-    creating a comprehensive, publicly available database of the severe acute respiratory
-    syndrome coronavirus 2 (SARS-CoV-2) that causes coronavirus disease (COVID-19).
-    We hope this would be useful resource to create detailed visualisation tools,
-    build models of the global spread of the virus and potentially inform adequate public policy.
 
-<br> <br>
+<div class="container_col">
+  <div class="browser">
+    <div class="container-fluid">
+      <div class="row">
 
-    <p>The project is coordinated by researchers from the <b>University of Oxford</b>, however contributions from
-      around the world are welcome and much appreciated. If you would like to help, please get in touch: <b>adam.mahdi@eng.ox.ac.uk</b>
+        <div class="col-sm-5" ><img src="images/fig_covid19db.png" width="100%" class="pull-left"></div>
+          <div class="col-sm-7">
+            This project aims to increase our understanding of the COVID-19 pandemic, elaborate possible ways to slow down the
+            spread of the virus and suggest strategies to reduce the impact on the society through the combined power of
+            Statistical and Mathematical Modelling, and Machine Learning techniques.
+                  </br> </br>
+                  We are currently in a process of assembling a comprehensive and conveniently formatted database COVID19DB
+                  (using acknowledged source), which is being made available to the public as we go.
+                  We aim to combine the following data:
+                  <ul>
+                     <li><b>Epidemiological data</b> (e.g. confirmed, dead, from regions)</li>
+                     <li><b>Government tracking</b> (e.g. shool closures, quarantines)</li>
+                     <li><b>Movement data</b> (e.g. movement of people, travel, social distansing)</li>
+                 </ul>
+          </div>
+
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="container_col_gray2"><h4><b>HOW DO I ACCESS THE DATABASE?</b></h4></div>
+
+    </br>
+
+
+    <div class="container_col_gray2"><h4><b>WHO ARE WE?</b></h4> </div>
+    <div class="container_col">
+      <p>The project is coordinated by researchers from the <b>University of Oxford</b>, however contributions from
+        around the world are welcome and much appreciated. If you would like to help, please get in touch: <b>adam.mahdi@eng.ox.ac.uk</b>
+
+      </br> </br>
+
+      For a current list of contributors see <a href="acknowledgements.html">here</a>.
+    </div>
+
+    <div class="container_col_gray2"><h4><b>HOW CAN I CONNECT TO THE DATABASE?</b></h4></div>
+
+    <div class="container_col">
+      You can use, for example, the following Python code and save the database into a DataFrame (df): </br>
+       </div>
+
+    <div class="container_col_gray2">
+    <!-- HTML generated using hilite.me -->
+    <div style="background: #ffffff; overflow:auto;width:auto;;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+    <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">psycopg2</span>
+    <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pandas</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">pd</span>
+
+    conn <span style="color: #333333">=</span> psycopg2<span style="color: #333333">.</span>connect(
+    host<span style="color: #333333">=</span><span>&#39;covid19db.org&#39;</span>,
+    port<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5432</span>,
+    dbname<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
+    user<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
+    password<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>
+    )
+    cur <span style="color: #333333">=</span> conn<span style="color: #333333">.</span>cursor()
+    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM infections;&quot;</span>)
+    df <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
+    </pre></div>
+
+    </div>
 
   <div class="container_col">
-    See <a href="data.html"> instructions how to connect to our COVDI19DB database, data format and sources</a>.
+    For more information on the data format and sources click <a href="data.html">here</a>.
  </div>
 
 
