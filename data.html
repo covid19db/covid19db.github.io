@@ -31,16 +31,16 @@
 <div class="container_col">
   As part of COVID19DB data base we are bulding three types of tables: </br></br>
     <ul>
-      <li><b>INFECTIONS</b> (<span style="color: #008800;  font-weight: bold">see below</span>):    Epidemiological data(e.g. confirmed, dead, etc.) </li>
+      <li><b>EPIDEMIOLOGY</b> (<span style="color: #008800;  font-weight: bold">see below</span>):  Epidemiological data(e.g. confirmed, dead, etc.) </li>
       <li><b>MOBILITY</b>   (<span style="color: #008800;  font-weight: bold">see below</span>):    Movement data</b> (e.g. movement of people, travel, social distansing, etc.) </li>
       <li><b>GOVTRACK</b>   (<span style="color: #A93226 ; font-weight: bold">in progress</span>):  Government tracking</b> (e.g. shool closures, quarantines, etc.) </li>
     </ul>
 </div>
 
 
-  <div class="container_col_gray1"><center><h2>INFECTIONS DATA</center></h2></div>
+  <div class="container_col_gray1"><center><h2>EPIDEMIOLOGICAL DATA</center></h2></div>
 
-  <div class="container_col_gray2"><h4><b>Data sources for INFECTIONS table</h4></b> </div>
+  <div class="container_col_gray2"><h4><b>Data sources for EPIDEMIOLOGY table</h4></b> </div>
   <div class="container_col">
       <p>
         We have included or currently working on including the following sources:
@@ -156,7 +156,7 @@
 
 
 
-    <div class="container_col_gray2"><h4><b>Schema for INFECTIONS table and CSV files</b></h4></div>
+    <div class="container_col_gray2"><h4><b>Schema for EPIDEMIOLOGY table and CSV files</b></h4></div>
 
     <div class="container_col">
     <table class="table table-bordered">
@@ -380,38 +380,39 @@
   </div>
 
 
-  <div class="container_col_gray2">
+  <div class="container_col">
     You can also use, for example, the following Python code and save the data into a DataFrame (df): </br>
      </div>
 
-<div class="container_col_gray2">
 
-  <!-- HTML generated using hilite.me -->
-  <div style="background: #ffffff; overflow:auto;width:auto;;border-width:.1em .1em .1em .8em; padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
-  You can use, for example, the following Python code and save the database into a DataFrame (df): </br>
-  <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">psycopg2</span>
-  <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pandas</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">pd</span>
+     <div class="container_col">
+         <!-- HTML generated using hilite.me -->
+       <div style="background: #ffffff; overflow:auto; width:auto;border-width:.1em .1em .1em .8em;">
+         <pre style="margin: 0;">
 
-  conn <span style="color: #333333">=</span> psycopg2<span style="color: #333333">.</span>connect(
-  host<span style="color: #333333">=</span><span>&#39;covid19db.org&#39;</span>,
-  port<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5432</span>,
-  dbname<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
-  user<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
-  password<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>
-  )
-  cur <span style="color: #333333">=</span> conn<span style="color: #333333">.cursor()</span>
+         <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">psycopg2</span>
+         <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pandas</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">pd</span>
+
+         conn <span style="color: #333333">=</span> psycopg2<span style="color: #333333">.</span>connect(
+         host<span style="color: #333333">=</span><span>&#39;covid19db.org&#39;</span>,
+         port<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5432</span>,
+         dbname<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
+         user<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
+         password<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>
+         )
+         cur <span style="color: #333333">=</span> conn<span style="color: #333333">.cursor()</span>
 
 
-  <span style="color: #008800"># load INFECTIONS table</span>
-  cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM infections;&quot;</span>)
-  df_infections <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
+        <span style="color: #008800"> # load EPIDEMIOLOGY table</span>
+         cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM epidemiology LIMIT 100;&quot;</span>)
+         df_epidemio <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
 
-  <span style="color: #008800"># load MOBILITY table</span>
-  cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM mobility;&quot;</span>)
-  df_mobility <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
-  </pre></div>
-
- </div>
+        <span style="color: #008800"> # load MOBILITY table</span>
+         cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM mobility LIMIT 100;&quot;</span>)
+         df_mobility <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
+         </pre>
+       </div>
+     </div>
 
 
 

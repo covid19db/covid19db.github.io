@@ -99,9 +99,9 @@
     cur <span style="color: #333333">=</span> conn<span style="color: #333333">.cursor()</span>
 
 
-   <span style="color: #008800"> # load INFECTIONS table</span>
-    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM infections LIMIT 100;&quot;</span>)
-    df_infections <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
+   <span style="color: #008800"> # load EPIDEMIOLOGY table</span>
+    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM epidemiology LIMIT 100;&quot;</span>)
+    df_epidemiology <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
 
    <span style="color: #008800"> # load MOBILITY table</span>
     cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM mobility LIMIT 100;&quot;</span>)
