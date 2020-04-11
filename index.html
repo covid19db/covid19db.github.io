@@ -73,7 +73,7 @@
       For a current list of contributors see <a href="acknowledgements.html">here</a>.
     </div>
 
-    <div class="container_col_gray2"><h4><b>HOW DO I GET ACCESS COVID19 DATA?</b></h4></div>
+    <div class="container_col_gray2"><h4><b>HOW DO I GET ACCESS TO COVID19DB DATA?</b></h4></div>
 
 
     <div class="container_col">
@@ -97,12 +97,12 @@
     cur <span style="color: #333333">=</span> conn<span style="color: #333333">.cursor()</span>
 
 
-   <span style="color: #008800"># load INFECTIONS table</span>
-    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM infections;&quot;</span>)
+   <span style="color: #008800"> # load INFECTIONS table</span>
+    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM infections LIMIT 100;&quot;</span>)
     df_infections <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
 
-   <span style="color: #008800"># load MOBILITY table</span>
-    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM mobility;&quot;</span>)
+   <span style="color: #008800"> # load MOBILITY table</span>
+    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM mobility LIMIT 100;&quot;</span>)
     df_mobility <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
     </pre>
   </div>
@@ -113,9 +113,9 @@
   <p>or download <b>CSV files</b> from the github account</p>
 </div>
 <div class="container_col">
-  <div div style=" overflow:auto;border-width:.1em .1em .1em .1em; padding:.2em .6em;"><pre style="margin: 0;">
-      <li> <a href="https://github.com/covid19db/covid19db-data/tree/master/data-infections">CSV files for INFECTIONS table</a></li>
-      <li> <a href="https://github.com/covid19db/covid19db-data/tree/master/data-infections">CSV file for  MOBILITY table</a></li>
+  <div div style=" overflow:auto;border-width:.1em .1em .1em .8em; padding:.2em .4em;"><pre style="margin: 0;">
+    <a href="https://github.com/covid19db/covid19db-data/tree/master/data-infections">CSV files for Epidemiological data</a>
+    <a href="https://github.com/covid19db/covid19db-data/tree/master/data-mobility">CSV files for Mobility data</a>
   </div>
 </div>
 
