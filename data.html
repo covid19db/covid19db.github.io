@@ -32,9 +32,9 @@
 <div class="container_col">
   As part of COVID-19 DATABASE we are bulding three types of tables: </br></br>
     <ul>
-      <li><b>INFECTIONS</b> (<span style="color: #008800; font-weight: bold">see below</span>):  Epidemiological data(e.g. confirmed, dead, etc.) </li>
-      <li><b>GOVTRACK</b> (<span style="color: #A93226 ; font-weight: bold">in progress</span>):  Government tracking</b> (e.g. shool closures, quarantines, etc.) </li>
-      <li><b>MOVEMENT</b> (<span style="color: #A93226 ; font-weight: bold">in progress</span>):   Movement data</b> (e.g. movement of people, travel, social distansing, etc.) </li>
+      <li><b>INFECTIONS</b> (<span style="color: #008800;  font-weight: bold">see below</span>):  Epidemiological data(e.g. confirmed, dead, etc.) </li>
+      <li><b>MOBILITY</b>   (<span style="color: #008800;  font-weight: bold">see below</span>):   Movement data</b> (e.g. movement of people, travel, social distansing, etc.) </li>
+      <li><b>GOVTRACK</b>   (<span style="color: #A93226 ; font-weight: bold">in progress</span>):  Government tracking</b> (e.g. shool closures, quarantines, etc.) </li>
     </ul>
 </div>
 
@@ -253,6 +253,112 @@
     </div>
 
 
+
+    <div class="container_col_gray2"><h4><b>Schema for MOBILITY table</b></h4></div>
+
+    <div class="container_col">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Data type</th>
+          <th scope="col">Short Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SOURCE</td>
+          <td>VARCHAR</td>
+          <td>Data source</td>
+        </tr>
+        <tr>
+          <td>DATE</td>
+          <td>DATE</td>
+          <td>Day of the statistics</td>
+        </tr>
+        <tr>
+          <td>COUNTRY</td>
+          <td>VARCHAR</td>
+          <td>English name for the country</td>
+        </tr>
+        <tr>
+          <td>COUNTRYCODE</td>
+          <td>VARCHAR(3)</td>
+          <td>ISO 3166-1 alpha-3 country codes</td>
+        </tr>
+        <tr>
+          <td>ADM_AREA_1</td>
+          <td>VARCHAR</td>
+          <td>First-level administrative country subdivision</td>
+        </tr>
+        <tr>
+          <td>ADM_AREA_2</td>
+          <td>VARCHAR</td>
+          <td>Second-level administrative country subdivision</td>
+        </tr>
+        <tr>
+          <td>ADM_AREA_3</td>
+          <td>VARCHAR</td>
+          <td>Third-level administrative country subdivision</td>
+        </tr>
+        <tr>
+          <td>TRANSIT_STATIONS</td>
+          <td>FLOAT</td>
+          <td>Number of people tested (cumulative)</td>
+        </tr>
+        <tr>
+          <td>RESIDENTIAL</td>
+          <td>FLOAT</td>
+          <td>Number of confirmed cases (cumulative)</td>
+        </tr>
+        <tr>
+          <td>WORKPLACE</td>
+          <td>FLOAT</td>
+          <td>Number of confirmed and recovered (cumulative)</td>
+        </tr>
+        <tr>
+          <td>PARKS</td>
+          <td>FLOAT</td>
+          <td>Number of confirmed who are/have been hospitalised (cumulative)</td>
+        </tr>
+        <tr>
+          <td>RETAIL_RECREATION</td>
+          <td>FLOAT</td>
+          <td>Number of confirmed who are/have been in the intensive care</td>
+        </tr>
+        <tr>
+          <td>GROCERY_FARMACY</td>
+          <td>FLOAT</td>
+          <td>Number of confirmed with home quarantine</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+
+
+    <div class="container_col_gray2"><h4><b>Data sources for MOBILITY table</h4></b> </div>
+    <div class="container_col">
+        <p>
+          We have included or currently working on including the following sources:
+        </p>
+      <table class="table">
+          <tr>
+            <th>Source</th>
+            <th>Source code</th>
+            <th>Granularity</th>
+            <th>Features</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.google.com/covid19/mobility/">COVID-19 Community Mobility Reports</a></td>
+            <td>GOOGLE_MOBILITY</td>
+            <td>regional information</td>
+            <td>transit_stations, residential, workplace, parks, retail_recreation, grocery farmacy</td>
+            <td><span style="color: #008800; font-weight: bold">implemented</span></td>
+          </tr>
+        </table>
+      </div>
 
 
   <div class="container_col_gray2"><h4><b>HOW CAN I CONNECT TO THE DATABASE?</b></h4></div>
