@@ -15,7 +15,14 @@
 <body>
 
   <header>
-    <div class="container2">
+
+  <div class="container_col">
+        <div id="logo_right">
+            <img src="images/logo_oxford.png">
+        </div>
+  </div>
+
+        <div class="container2">
       <nav>
         <ul>
           <li class="Covid-19 Database"><a href="index.html">Covid-19 DB</a></li>
@@ -33,7 +40,7 @@
     <ul>
       <li><b>EPIDEMIOLOGY</b> (<span style="color: #008800;  font-weight: bold">see below</span>): epidemiological data (confirmed, dead, recovered, hospitalised, etc.) </li>
       <li><b>MOBILITY</b>   (<span style="color: #008800;  font-weight: bold">see below</span>):  mobility data (movement trends over time by geography, e.g. workplace, parks) </li>
-      <li><b>GOVERNMENT_RESPONSE</b>   (<span style="color: #A93226 ; font-weight: bold">in progress</span>): government response to combat COVID-19 (school closures, quarantines, etc.) </li>
+      <li><b>GOVERNMENT_RESPONSE</b>   (<span style="color: #008800;  font-weight: bold">see below</span>): government response to combat COVID-19 (school closures, quarantines, etc.) </li>
       <li><b>COUNTRY_STATS</b>   (<span style="color: #A93226 ; font-weight: bold">in progress</span>): demographics and heathcare statistics including population, median age, number of hospitals, etc.</li>
     </ul>
 </div>
@@ -266,6 +273,35 @@
         changes.
       </p>
     </div>
+
+
+
+    <div class="container_col_gray1"><center><h2>GOVERMENT RESPONSE DATA</center></h2></div>
+
+
+    <div class="container_col_gray2"><h4><b>Data sources for GOVERMENT RESPONSE table</h4></b> </div>
+    <div class="container_col">
+        <p>
+          We have included or currently working on including the following sources:
+        </p>
+      <table class="table">
+          <tr>
+            <th>Source</th>
+            <th>Source code</th>
+            <th>Granularity</th>
+            <th>Example Features</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td><a href="https://www.bsg.ox.ac.uk/research/research-projects/oxford-covid-19-government-response-tracker"> Oxford COVID-19 government response tracker</a></td>
+            <td>GOVERNMENT_RESPONSE</td>
+            <td>country-level</td>
+            <td>SchoolClosing, WorkplaceClosing, CancelPublicEvents, ClosePublicTransport</td>
+            <td><span style="color: #008800; font-weight: bold">implemented</span></td>
+          </tr>
+        </table>
+      </div>
+
 
 
 
