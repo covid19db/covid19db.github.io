@@ -118,3 +118,12 @@ header a:hover{
   color: #cccccc;
   font-weight: bold;
 }
+
+
+
+.box{
+  text-align: left;
+  float: left;
+  width: 80%;
+  padding: 5px;
+}

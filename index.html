@@ -70,24 +70,21 @@
     </br>
 
 
-    <div class="container_col_gray2"><h4><b>WHO ARE WE?</b></h4> </div>
-    <div class="container_col">
+ <div class="container_col_gray2"><h4><b>Who are we?</b></h4> </div>
+ <div class="container_col">
       <p>The project is coordinated by researchers from the <b>University of Oxford</b>, however contributions from
         around the world are welcome and much appreciated. If you would like to help, please get in touch: <b>Adam Mahdi</b> (adam.mahdi@eng.ox.ac.uk).
-
       </br> </br>
-
       For a current list of contributors see <a href="acknowledgements.html">here</a>.
-    </div>
-
-    <div class="container_col_gray2"><h4><b>HOW TO ACCESS COVID19DB DATABASE?</b></h4></div>
+ </div>
 
 
-    <div class="container_col">
+ <div class="container_col_gray2"><h4><b>Accessing COVID19DB database</b></h4></div>
+ <div class="container_col">
       You can access COVID19DB database in two ways. Connecting to the public <b>PostgreSQL database</b>, e.g. using the following code
-    </div>
+ </div>
 
-<div class="container_col">
+ <div class="container_col">
     <!-- HTML generated using hilite.me -->
   <div style="background: #ffffff; overflow:auto;width:auto;;border-width:.1em .1em .1em .8em; padding:.2em .6em;">
     <pre style="margin: 0; line-height: 125%">
@@ -104,7 +101,6 @@
     )
     cur <span style="color: #333333">=</span> conn<span style="color: #333333">.cursor()</span>
 
-
    <span style="color: #008800"> # load EPIDEMIOLOGY table</span>
     cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM epidemiology LIMIT 100;&quot;</span>)
     df_epidemiology <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
@@ -118,21 +114,21 @@
     df_govres <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
     </pre>
   </div>
-</div>
+ </div>
 
 
-<div class="container_col">
+ <div class="container_col">
   <p>or download <b>CSV files</b> from the GitHub account</p>
-</div>
-<div class="container_col_gray3">
+ </div>
+ <div class="container_col_gray3">
     <a href="https://github.com/covid19db/covid19db-data/tree/master/data-epidemiology">CSV files for Epidemiology data</a> and the corresponding data fetchers <a href="https://github.com/covid19db/fetchers-js"> here (JS)</a> and <a href="https://github.com/covid19db/fetchers-python"> here (Python)</a></br>
     <a href="https://github.com/covid19db/covid19db-data/tree/master/data-mobility">CSV files for Mobility data</a> and our Google mobility reports extractor <a href="https://github.com/covid19db/google-mobility-reports-extractor">here</a>
-</div>
+ </div>
 
 
 
 
-  <div class="container_col">
+ <div class="container_col">
     For more information on the data format and sources click <a href="data.html">here</a>.
  </div>
 
@@ -143,7 +139,26 @@
     </div>
   </div>
 
+ <div class="container_col_gray2"><h4><b>Examples of how to use COVID19DB database</b></h4></div>
+
+ <div class="container_col">
+   Examples of how to load, query and make simple visualisation using COVID19DB using Jupyter notebook: </br></br>
+   <div class="row">
+     <div class="col-xs-4 col-sm-2"> <div class="box"><a href="https://github.com/covid19db/covid19db-data/blob/master/jupyter-examples/covid19db-confirmed-and-deaths.ipynb"><img src="images/fig_jupyter_compare.png" class="img-responsive"></a></div></div>
+     <div class="col-xs-8 col-sm-10"><b>Comparing different countries.</b> An example of how to use EPIDEMIOLOGY table within COVID19DB database to plot a simple comparison of confirmed cases and mortality between different countries<div class="container_text"><br></div>
+   </div>
+ </div>
+ <div class="row">
+   <div class="col-xs-4 col-sm-2"> <div class="box"><a href="https://github.com/covid19db/covid19db-data/blob/master/jupyter-examples/covid19db-confirmed-worldwide.ipynb"><img src="images/fig_jupyter_world.png" class="img-responsive"></a></div></div>
+   <div class="col-xs-8 col-sm-10"><b>Gradient map of the world.</b> An example of how to to use EPIDEMIOLOGY table within COVID19DB database to build a simple gradient map for confirmed cases for the countries of the world.<div class="container_text"><br></div>
+ </div>
+</div>
+<div class="row">
+  <div class="col-xs-4 col-sm-2"> <div class="box"><a href="https://github.com/covid19db/covid19db-data/blob/master/jupyter-examples/covid19db-confirmed-adm-1-level-italy.ipynb"><img src="images/fig_jupyter_italy.png" class="img-responsive"></a></div></div>
+  <div class="col-xs-8 col-sm-10"><b>Gradient map for different regions.</b> An example of how to to use EPIDEMIOLOGY table within COVID19DB database to build a simple gradient map for confirmed for different regions in Italy.<div class="container_text"><br></div>
+</div>
+</div>
+ </div>
 
 </body>
-
 </html>
