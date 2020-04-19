@@ -481,25 +481,30 @@
           <td>ISO 3166-1 alpha-2 country codes</td>
         </tr>
         <tr>
+          <tr>
+            <td>ADM_LEVEL</td>
+            <td>INTEGER</td>
+            <td>0 - for countries level, 1 - for regions etc.</td>
+          </tr>
         <tr>
           <td>LATITUDE</td>
           <td>FLOAT</td>
-          <td>Geographic coordinate</td>
+          <td>Geographic coordinate of region's centroid</td>
         </tr>
         <tr>
           <td>LONGTITUDE</td>
           <td>FLOAT</td>
-          <td>Geographic coordinate</td>
+          <td>Geographic coordinate of region's centroid</td>
         </tr>
         <tr>
           <td>PROPERTIES</td>
           <td>JSON</td>
-          <td></td>
+          <td>Additional attributes describing region</td>
         </tr>
         <tr>
           <td>GEOMETRY</td>
           <td>GEOMETRY</td>
-          <td></td>
+          <td>Polygon describing geographical area</td>
         </tr>
       </tbody>
     </table>
