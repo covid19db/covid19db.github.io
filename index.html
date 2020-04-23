@@ -16,45 +16,53 @@
 <body>
 
   <header>
-    <div class="container2">
-      <nav>
-        <ul>
-          <li class="Covid-19 Database"><a href="index.html">Covid-19 DB</a></li>
-          <li><a href="data.html">Data</a></li>
-          <li><a href="news.html">Resources</a></li>
-          <li><a href="acknowledgements.html">Contribution</a></li>
-        </ul>
-      </nav>
-    </div>
+  <div class="container_col">
+    <div class="browser">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10"><center><h1 style="color:#002147">Understanding global impact of COVID-19</br> through Data Science Project</h1></center></div>
+        <div class="col-sm-2"><div id="logo_right"><img src="images/logo_oxford.png" width="100%" class="pull-left"> </div></div>
+      </div>
+      </div>
+      </div>
+  </div>
+
+ <div class="container2">
+    <nav>
+      <ul>
+        <li class="Covid-19 Database"><a href="index.html">MAIN</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="news.html">Resources</a></li>
+        <li><a href="acknowledgements.html">Contribution</a></li>
+      </ul>
+    </nav>
+ </div>
   </header>
 
-  <div class="container_col_gray1"><center><h2>Understanding global impact of Covid-19 through Data Science</h2></center></div>
 
 
-  <div class="container_col_gray2"><h4><b>COVID19DB database</b></h4> </div>
+  <div class="container_col_gray2"><h4><b>COVID19DB PROJECT</b></h4> </div>
 
 <div class="container_col">
   <div class="browser">
     <div class="container-fluid">
       <div class="row">
-
         <div class="col-sm-5" ><img src="images/fig_covid19db_four2.jpg" width="100%" class="pull-left"></div>
           <div class="col-sm-7">
-          This project aims to increase our understanding of the COVID-19 pandemic and elaborate possible
-          strategies to reduce the impact on the society through the combined power of Statistical and Mathematical Modelling,
-          and Machine Learning techniques.
-                  </br> </br>
-                  We are currently in a process of assembling a comprehensive and conveniently formatted database COVID19DB
-                  (using acknowledged sources), which is being made available to the public as we go.
-                  We aim to combine the following data:
-                  <ul>
-                     <li><b>Epidemiology</b> (e.g. confirmed, dead, recovered, hospitalised, etc.)</li>
-                     <li><b>Mobility</b> (movement trends over time by geography, e.g. workplace, parks)</li>
-                     <li><b>Government response</b> (e.g. shool closures, quarantines, etc.)</li>
-                     <li><b>Country statistics</b> (e.g. population, GDP, number of hospitas, etc.)</li>
-                 </ul>
+              This project aims to increase our understanding of the COVID-19 pandemic and elaborate possible
+              strategies to reduce the impact on the society through the combined power of Statistical and Mathematical Modelling,
+              and Machine Learning techniques.
+              </br> </br>
+              We are currently in a process of assembling a comprehensive and conveniently formatted database COVID19DB
+              (using acknowledged sources), which is being made available to the public as we go.
+              We aim to combine the following data:
+                <ul>
+                   <li><b>Epidemiology</b> (e.g. confirmed, dead, recovered, hospitalised, etc.)</li>
+                   <li><b>Mobility</b> (movement trends over time by geography, e.g. workplace, parks)</li>
+                   <li><b>Government response</b> (e.g. shool closures, quarantines, etc.)</li>
+                   <li><b>Country statistics</b> (e.g. population, GDP, number of hospitas, etc.)</li>
+                </ul>
           </div>
-
       </div>
     </div>
   </div>
@@ -64,24 +72,21 @@
     </br>
 
 
-    <div class="container_col_gray2"><h4><b>WHO ARE WE?</b></h4> </div>
-    <div class="container_col">
+ <div class="container_col_gray2"><h4><b>Who are we?</b></h4> </div>
+ <div class="container_col">
       <p>The project is coordinated by researchers from the <b>University of Oxford</b>, however contributions from
-        around the world are welcome and much appreciated. If you would like to help, please get in touch: <b>adam.mahdi@eng.ox.ac.uk</b>
-
+        around the world are welcome and much appreciated. If you would like to help, please get in touch: <b>Adam Mahdi</b> (adam.mahdi@eng.ox.ac.uk).
       </br> </br>
-
       For a current list of contributors see <a href="acknowledgements.html">here</a>.
-    </div>
-
-    <div class="container_col_gray2"><h4><b>HOW TO ACCESS COVID19DB DATABASE?</b></h4></div>
+ </div>
 
 
-    <div class="container_col">
+ <div class="container_col_gray2"><h4><b>Accessing COVID19DB database</b></h4></div>
+ <div class="container_col">
       You can access COVID19DB database in two ways. Connecting to the public <b>PostgreSQL database</b>, e.g. using the following code
-    </div>
+ </div>
 
-<div class="container_col">
+ <div class="container_col">
     <!-- HTML generated using hilite.me -->
   <div style="background: #ffffff; overflow:auto;width:auto;;border-width:.1em .1em .1em .8em; padding:.2em .6em;">
     <pre style="margin: 0; line-height: 125%">
@@ -98,7 +103,6 @@
     )
     cur <span style="color: #333333">=</span> conn<span style="color: #333333">.cursor()</span>
 
-
    <span style="color: #008800"> # load EPIDEMIOLOGY table</span>
     cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM epidemiology LIMIT 100;&quot;</span>)
     df_epidemiology <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
@@ -106,34 +110,72 @@
    <span style="color: #008800"> # load MOBILITY table</span>
     cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM mobility LIMIT 100;&quot;</span>)
     df_mobility <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
+
+    <span style="color: #008800"># load GOVERNMENT_REPONSE table</span>
+    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM government_response LIMIT 100;&quot;</span>)
+    df_govres <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
     </pre>
   </div>
-</div>
+ </div>
 
 
-<div class="container_col">
-  <p>or download <b>CSV files</b> from the GitHub account</p>
-</div>
-<div class="container_col_gray3">
+ <div class="container_col">
+  <p>or download <b>CSV files</b> from the GitHub repository</p>
+ </div>
+ <div class="container_col_gray3">
     <a href="https://github.com/covid19db/covid19db-data/tree/master/data-epidemiology">CSV files for Epidemiology data</a> and the corresponding data fetchers <a href="https://github.com/covid19db/fetchers-js"> here (JS)</a> and <a href="https://github.com/covid19db/fetchers-python"> here (Python)</a></br>
     <a href="https://github.com/covid19db/covid19db-data/tree/master/data-mobility">CSV files for Mobility data</a> and our Google mobility reports extractor <a href="https://github.com/covid19db/google-mobility-reports-extractor">here</a>
-</div>
+ </div>
 
 
 
 
-  <div class="container_col">
+ <div class="container_col">
     For more information on the data format and sources click <a href="data.html">here</a>.
  </div>
 
-  <div class="container_col">
-    <div class="row">
-      <div class="col-xs-8 col-sm-10"></div>
-      <div class="col-xs-4 col-sm-2"><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=tt&d=V0C1yGjNrHUiZvwm2HgrBd05n_h64CAqyps7RaYcfGU&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script></div>
-    </div>
-  </div>
+
+ <div class="container_col_gray2"><h4><b>Examples of how to use COVID19DB database</b></h4></div>
+
+ <div class="container_col">
+   Examples of how to load and query COVID19DB database and make simple visualisations in Jupyter notebook (Python). For more examples see our  <a href="https://github.com/covid19db/covid19db-data/tree/master/jupyter-examples">GitHub repository</a>. Feel free to get in touch if you would like to suggest or send us an informative visualisation usign COVID19DB.</br></br>
+   <div class="row">
+     <div class="col-xs-5 col-sm-3"> <div class="box"><a href="https://github.com/covid19db/covid19db-data/blob/master/jupyter-examples/covid19db-confirmed-and-deaths.ipynb"><img src="images/fig_jupyter_compare.png" class="img-responsive"></a></div></div>
+     <div class="col-xs-7 col-sm-9"><b>Comparing different countries.</b> An example of how to use EPIDEMIOLOGY table within COVID19DB database to plot a simple comparison of confirmed cases and mortality between different countries.<div class="container_text"><br></div>
+   </div>
+ </div>
+ <div class="row">
+   <div class="col-xs-5 col-sm-3"> <div class="box"><a href="https://github.com/covid19db/covid19db-data/blob/master/jupyter-examples/covid19db-confirmed-worldwide.ipynb"><img src="images/fig_jupyter_world.png" class="img-responsive"></a></div></div>
+   <div class="col-xs-7 col-sm-9"><b>Gradient map of the world.</b> An example of how to use EPIDEMIOLOGY table within COVID19DB database to build a simple gradient map for confirmed cases for the countries of the world.<div class="container_text"><br></div>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-5 col-sm-3"> <div class="box"><a href="https://github.com/covid19db/covid19db-data/blob/master/jupyter-examples/covid19db-confirmed-adm-1-level-italy.ipynb"><img src="images/fig_jupyter_italy.png" class="img-responsive"></a></div></div>
+  <div class="col-xs-7 col-sm-9"><b>Gradient map for different regions.</b> An example of how to use EPIDEMIOLOGY table within COVID19DB database to build a simple gradient map for confirmed for different regions in Italy.<div class="container_text"><br></div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-5 col-sm-3"> <div class="box"><a href="https://github.com/covid19db/covid19db-data/blob/master/jupyter-examples/covid19db_govtrack_pl_school_closing.ipynb"><img src="images/fig_jupyter_govres.png" class="img-responsive"></a></div></div>
+  <div class="col-xs-7 col-sm-9"><b>Government action against confirmed cases.</b> An example of how to use GOVERNMENT_RESPONSE table within COVID19DB database to build a plot comparing government actions taken due to Covid-19 aginst confirmed cases from the EPIDEMIOLOGY table for the UK.<div class="container_text"><br></div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-5 col-sm-3"> <div class="box"><a href="https://github.com/covid19db/covid19db-data/blob/master/jupyter-examples/covid19db_govermental_actions_and_mobility.ipynb"><img src="images/fig_jupyter_multimodal.png" class="img-responsive"></a></div></div>
+  <div class="col-xs-7 col-sm-9"><b>Multimodal Covid-19 data.</b> An example of how to use GOVERNMENT_RESPONSE, MOBILITY and EPIDEMIOLOGY tables within COVID19DB database to build a multimodal plot comparing government actions taken due to Covid-19 aginst confirmed cases and mobility.<div class="container_text"><br></div>
+</div>
+</div>
 
 
+ </div>
+
+ <div class="container_col">
+   <div class="row">
+     <div class="col-xs-8 col-sm-10"></div>
+     <div class="col-xs-4 col-sm-2"><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=tt&d=V0C1yGjNrHUiZvwm2HgrBd05n_h64CAqyps7RaYcfGU&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script></div>
+   </div>
+ </div>
 </body>
-
 </html>
