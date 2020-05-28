@@ -98,7 +98,7 @@
         <tr>
           <td>Germany</td>
           <td>Collected by <a href="https://github.com/jgehrcke/covid-19-germany-gae">Jan-Philip Gehrcke from public health offices (Gesundheitsaemter)</a></td>
-          <td>FRA_SPFCG</td>
+          <td>DEU_JPGG</td>
           <td>regional information</td>
           <td>confirmed, dead</td>
         </tr>
@@ -122,14 +122,6 @@
           <td>IND_COVIND</td>
           <td>regional information</td>
           <td>tested, confirmed, recovered, dead</td>
-        </tr>
-
-        <tr>
-          <td>Japan</td>
-          <td>Collected by <a href="https://github.com/reustle/covid19japan-data">Covid 19 Japan</a></td>
-          <td>JPN_C1J</td>
-          <td>prefectures and municipalities</td>
-          <td>confirmed, recovered, dead, ICU</td>
         </tr>
         <tr>
           <td>South Korea</td>
@@ -158,13 +150,6 @@
           <td>POR_MSDS</td>
           <td>regional information</td>
           <td>tested, confirmed, recovered, dead, hospitalised, ICU, quarantined</td>
-        </tr>
-        <tr>
-          <td>Sweden</td>
-          <td>Data provided by <a href="https://portal.icuregswe.org/siri/report/corona.alderkon">Swedish register of intensive care wards</a></td>
-          <td>SWE_SIR</td>
-          <td>regional information</td>
-          <td>ICU</td>
         </tr>
         <tr>
           <td>Thailand</td>
@@ -594,6 +579,219 @@
           <td>GEOMETRY</td>
           <td>Polygon describing geographical area</td>
         </tr>
+      </tbody>
+    </table>
+    </div>
+
+
+
+    <div class="container_col_gray1"><center><h2>WEATHER</center></h2></div>
+
+    <div class="container_col_gray2"><h4><b>Schema for WEATHER table</b></h4></div>
+
+    <div class="container_col">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Data type</th>
+          <th scope="col">Short Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SOURCE</td>
+          <td>VARCHAR</td>
+          <td>Data source</td>
+        </tr>
+        <tr>
+          <td>DATE</td>
+          <td>DATE</td>
+          <td>Day of the statistics</td>
+        </tr>
+        <tr>
+          <td>COUNTRY</td>
+          <td>VARCHAR</td>
+          <td>English name for the country</td>
+        </tr>
+        <tr>
+          <td>COUNTRYCODE</td>
+          <td>VARCHAR(3)</td>
+          <td>ISO 3166-1 alpha-3 country codes</td>
+        </tr>
+        <tr>
+          <td>GID</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PRECIP_MAX_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PRECIP_MAX_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PRECIP_MEAN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PRECIP_MEAN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>SPECIFIC_HUMIDITY_MAX_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SPECIFIC_HUMIDITY_MAX_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SPECIFIC_HUMIDITY_MEAN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SPECIFIC_HUMIDITY_MEAN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SPECIFIC_HUMIDITY_MIN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SPECIFIC_HUMIDITY_MIN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>SHORT_WAVE_RADIATION_MAX_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SHORT_WAVE_RADIATION_MAX_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SHORT_WAVE_RADIATION_MEAN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SHORT_WAVE_RADIATION_MEAN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>TEMPERATURE_MAX_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>TEMPERATURE_MAX_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>TEMPERATURE_MEAN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>TEMPERATURE_MEAN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>TEMPERATURE_MIN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>TEMPERATURE_MIN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+
+
+        <tr>
+          <td>WINDGUST_MAX_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDGUST_MAX_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDGUST_MEAN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDGUST_MEAN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDGUST_MIN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDGUST_MIN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+
+
+        <tr>
+          <td>WINDSPEED_MAX_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDSPEED_MAX_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDSPEED_MEAN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDSPEED_MEAN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDSPEED_MIN_AVG</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>WINDSPEED_MIN_STD</td>
+          <td>FLOAT</td>
+          <td></td>
+        </tr>
+
       </tbody>
     </table>
     </div>
