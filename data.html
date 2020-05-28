@@ -528,18 +528,8 @@
       </thead>
       <tbody>
         <tr>
-          <td>SOURCE</td>
-          <td>VARCHAR</td>
-          <td>Data source</td>
-        </tr>
-        <tr>
-          <td>DATE</td>
-          <td>DATE</td>
-          <td>Day of the statistics</td>
-        </tr>
-        <tr>
           <td>GID</td>
-          <td>ARRAY</td>
+          <td>VARCHAR</td>
           <td>Unique geographical ID, for more details see <a href="https://gadm.org"> gadm.org</a></td>
         </tr>
         <tr>
@@ -553,9 +543,19 @@
           <td>ISO 3166-1 alpha-3 country codes</td>
         </tr>
         <tr>
+          <td>COUNTRYCODE_ALPHA2</td>
+          <td>VARCHAR</td>
+          <td>ISO 3166-1 alpha-2 country codes</td>
+        </tr>
+        <tr>
           <td>ADM_AREA_1</td>
           <td>VARCHAR</td>
           <td>First-level administrative country subdivision</td>
+        </tr>
+        <tr>
+          <td>ADM_AREA_1_CODE</td>
+          <td>VARCHAR</td>
+          <td>First-level administrative country code subdivision</td>
         </tr>
         <tr>
           <td>ADM_AREA_2</td>
@@ -563,14 +563,19 @@
           <td>Second-level administrative country subdivision</td>
         </tr>
         <tr>
+          <td>ADM_AREA_2_CODE</td>
+          <td>VARCHAR</td>
+          <td>Second-level administrative country code subdivision</td>
+        </tr>
+        <tr>
           <td>ADM_AREA_3</td>
           <td>VARCHAR</td>
           <td>Third-level administrative country subdivision</td>
         </tr>
         <tr>
-          <td>COUNTRYCODE_ALPHA2</td>
+          <td>ADM_AREA_3_CODE</td>
           <td>VARCHAR</td>
-          <td>ISO 3166-1 alpha-2 country codes</td>
+          <td>Third-level administrative country code subdivision</td>
         </tr>
         <tr>
           <tr>
@@ -630,7 +635,7 @@
         </tr>
         <tr>
           <td>GID</td>
-          <td>ARRAY</td>
+          <td>VARCHAR</td>
           <td>Unique geographical ID, for more details see <a href="https://gadm.org"> gadm.org</a></td>
         </tr>
         <tr>
