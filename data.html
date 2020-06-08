@@ -26,155 +26,23 @@
       </div>
   </div>
 
- <div class="container2">
-    <nav>
-      <ul>
-        <li class="Covid-19 Database"><a href="index.html">MAIN</a></li>
-        <li><a href="data.html">Data</a></li>
-        <li><a href="news.html">Resources</a></li>
-        <li><a href="acknowledgements.html">Contribution</a></li>
-      </ul>
-    </nav>
- </div>
-  </header>
+  <div class="container2">
+     <nav>
+       <ul>
+         <li class="Covid-19 Database"><a href="index.html">Main</a></li>
+         <li><a href="data.html">Data  Structure</a></li>
+         <li><a href="news.html">Data  Sources</a></li>
+         <li><a href="acknowledgements.html">Contribution</a></li>
+       </ul>
+     </nav>
+  </div>
+   </header>
 
 
-<div class="container_col">
-  As part of OxCOVID19 database we built the following tables: </br></br>
-    <ul>
-      <li><b>EPIDEMIOLOGY</b>: epidemiological data (confirmed, dead, recovered, hospitalised, etc.) </li>
-      <li><b>GOVERNMENT_RESPONSE</b>: government response to combat COVID-19 (school closures, quarantines, etc.) </li>
-      <li><b>MOBILITY</b>: mobility data (movement trends over time by geography, e.g. workplace, parks) </li>
-      <li><b>ADMINISTRATIVE_DIVISION</b>: ISO 3166-1 alpha-2 and alpha_2 country codes, administrative levels 1-3 and their codes, geometry(Multipolygon, 4326), etc</li>
-      <li><b>COUNTRY_STATISTICS</b>: demographics and heathcare statistics including population, median age, number of hospitals, etc.</li>
-      <li><b>WEATHER</b>:  averaged values of temperature, humidity, rainfall etc. for level 2 admin units.</li>
-    </ul>
-</div>
 
 
-  <div class="container_col_gray1"><center><h2>EPIDEMIOLOGY</center></h2></div>
 
-  <div class="container_col_gray2"><h4><b>Data sources for EPIDEMIOLOGY table</h4></b> </div>
-  <div class="container_col">
-      <p>
-        We have included or currently working on including the following sources:
-      </p>
-    <table class="table">
-        <tr>
-          <th>Country</th>
-          <th>Source</th>
-          <th>Source code</th>
-          <th>Granularity</th>
-          <th>Features</th>
-        </tr>
-        <tr>
-          <td>World</td>
-          <td><a href="https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide">European Centre for Disease Prevention and Control</a></td>
-          <td>WRD_ECDC</td>
-          <td>mostly country-level information</td>
-          <td>confirmed, recovered, dead</td>
-        </tr>
-        <tr>
-          <td>World</td>
-          <td><a href="https://github.com/CSSEGISandData/COVID-19">John Hopkins University from WHO reports</a></td>
-          <td>WRD_WHOJHU</td>
-          <td>mostly country-level information</td>
-          <td>confirmed, recovered, dead</td>
-        </tr>
-        <tr>
-          <td>Belgium</td>
-          <td><a href="https://epistat.wiv-isp.be/covid/">Epistat</a></td>
-          <td>BEL_EPIMS</td>
-          <td>regional information</td>
-          <td>tested, confirmed, recovered, dead, hospitalised, ICU, quarantined</td>
-        </tr>
-        <tr>
-          <td>France</td>
-          <td><a href="https://github.com/cedricguadalupe/FRANCE-COVID-19">Cédric GUADALUPE from Agence Regionale de Sante and others</a></td>
-          <td>FRA_SPFCG</td>
-          <td>regional information</td>
-          <td>confirmed, recovered, dead</td>
-        </tr>
-        <tr>
-          <td>Germany</td>
-          <td><a href="https://github.com/jgehrcke/covid-19-germany-gae">Jan-Philip Gehrcke from public health offices (Gesundheitsaemter)</a></td>
-          <td>DEU_JPGG</td>
-          <td>regional information</td>
-          <td>confirmed, dead</td>
-        </tr>
-        <tr>
-          <td>Italy</td>
-          <td><a href="https://github.com/pcm-dpc/COVID-19">Protezione Civile</a></td>
-          <td>ITA_PC</td>
-          <td>regional information</td>
-          <td>tested, confirmed, recovered, dead, hospitalised, ICU, quarantined</td>
-        </tr>
-        <tr>
-          <td>Italy</td>
-          <td><a href="https://github.com/DavideMagno/ItalianCovidData">Davide Magno from Protezione Civile</a></td>
-          <td>ITA_PCDM</td>
-          <td>regional information</td>
-          <td>tested, confirmed, recovered, dead, hospitalised, ICU, quarantined</td>
-        </tr>
-        <tr>
-          <td>India</td>
-          <td><a href="https://api.covid19india.org/">api.covid19india.org</a></td>
-          <td>IND_COVIND</td>
-          <td>regional information</td>
-          <td>tested, confirmed, recovered, dead</td>
-        </tr>
-        <tr>
-          <td>South Korea</td>
-          <td><a href="https://github.com/jihoo-kim/Data-Science-for-COVID-19"> Jihoo-Kim</a></td>
-          <td>KOR_DS4C</td>
-          <td>regional data</td>
-          <td>tested, confirmed, recovered, dead</td>
-        </tr>
-        <tr>
-          <td>Poland</td>
-          <td><a href="https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Poland">wikipedia</a></td>
-          <td>POL_WIKI</td>
-          <td>regional information</td>
-          <td>confirmed, dead</td>
-        </tr>
-        <tr>
-          <td>Spain</td>
-          <td><a href="https://raw.githubusercontent.com/victorvicpal/COVID19_es/master/data/final_data/dataCOVID19_es.csv">Victor Vincente Palacios</a></td>
-          <td>ESP_MSVP</td>
-          <td>regional information</td>
-          <td>confirmed, recovered, dead, hospitalised, ICU</td>
-        </tr>
-        <tr>
-          <td>Portugal</td>
-          <td><a href="https://github.com/dssg-pt/covid19pt-data">dssg-pt</a></td>
-          <td>POR_MSDS</td>
-          <td>regional information</td>
-          <td>tested, confirmed, recovered, dead, hospitalised, ICU, quarantined</td>
-        </tr>
-        <tr>
-          <td>Thailand</td>
-          <td><a href="https://covid19.th-stat.com/en/api">Department of Disease Control</a></td>
-          <td>THA_STAT</td>
-          <td>regional information</td>
-          <td>confirmed, recovered, dead, hospitalised</td>
-        </tr>
-        <tr>
-          <td>United Kingdom</td>
-          <td><a href="https://github.com/tomwhite/covid-19-uk-data">Tom White</a></td>
-          <td>GBR_PHTW</td>
-          <td>regional information</td>
-          <td>tested, confirmed, dead</td>
-        </tr>
-        <tr>
-          <td>United States</td>
-          <td>Data provided by <a href="https://github.com/nytimes/covid-19-data">The New York Times</a></td>
-          <td>USA_NYT</td>
-          <td>county-level information</td>
-          <td>confirmed, dead</td>
-        </tr>
-      </table>
-    </div>
-
+  <div class="container_col_gray1"><center><h2>Data Structures for OxCOVID19 Database</center></h2></div>
 
     <div class="container_col_gray2"><h4><b>Schema for EPIDEMIOLOGY table and CSV files</b></h4></div>
 
@@ -270,44 +138,7 @@
 
 
 
-    <div class="container_col">
-      <p>
-        <b>Note 1:</b> We collect the data as they come from the indicated data sources. It is possible that different sources
-        provide slighlty different statistics.
-      </p>
 
-      <p>
-        <b>Note 2:</b> The database is being built and it is likely that the
-        datastructure will change. Check this webpage regularly to be notified about
-        changes.
-      </p>
-    </div>
-
-
-
-    <div class="container_col_gray1"><center><h2>GOVERMENT RESPONSE</center></h2></div>
-
-
-    <div class="container_col_gray2"><h4><b>Data sources for GOVERMENT_RESPONSE table</h4></b> </div>
-    <div class="container_col">
-        <p>
-          We have included or currently working on including the following sources:
-        </p>
-      <table class="table">
-          <tr>
-            <th>Source</th>
-            <th>Source code</th>
-            <th>Granularity</th>
-            <th>Example Features</th>
-          </tr>
-          <tr>
-            <td><a href="https://www.bsg.ox.ac.uk/research/research-projects/oxford-covid-19-government-response-tracker"> Oxford COVID-19 government response tracker</a></td>
-            <td>GOVERNMENT_RESPONSE</td>
-            <td>country-level</td>
-            <td>SchoolClosing, WorkplaceClosing, CancelPublicEvents, ClosePublicTransport</td>
-          </tr>
-        </table>
-      </div>
 
 
       <div class="container_col_gray2"><h4><b>Schema for GOVERNMENT_RESPONSE table</b></h4></div>
@@ -375,36 +206,6 @@
 
 
 
-
-    <div class="container_col_gray1"><center><h2>MOBILITY</center></h2></div>
-
-
-    <div class="container_col_gray2"><h4><b>Data sources for MOBILITY table</h4></b> </div>
-    <div class="container_col">
-        <p>
-          We have included or currently working on including the following sources:
-        </p>
-      <table class="table">
-          <tr>
-            <th>Source</th>
-            <th>Source code</th>
-            <th>Granularity</th>
-            <th>Features</th>
-          </tr>
-          <tr>
-            <td><a href="https://www.google.com/covid19/mobility/">Google COVID-19 Community Mobility Reports</a></td>
-            <td>GOOGLE_MOBILITY</td>
-            <td>regional information</td>
-            <td>transit_stations, residential, workplace, parks, retail_recreation, grocery farmacy</td>
-          </tr>
-          <tr>
-            <td><a href="https://www.apple.com/covid19/mobility">Apple Mobility Trends Reports</a></td>
-            <td>APPLE_MOBILITY</td>
-            <td>regional information</td>
-            <td>driving, walking, transit</td>
-          </tr>
-        </table>
-      </div>
 
 
     <div class="container_col_gray2"><h4><b>Schema for MOBILITY table and CSV file</b></h4></div>
@@ -512,9 +313,6 @@
     </div>
 
 
-
-    <div class="container_col_gray1"><center><h2>ADMINISTRATIVE DIVISION</center></h2></div>
-
     <div class="container_col_gray2"><h4><b>Schema for ADMINISTRATIVE_DIVISION table</b></h4></div>
 
     <div class="container_col">
@@ -608,26 +406,6 @@
     </div>
 
 
-
-    <div class="container_col_gray1"><center><h2>WEATHER</center></h2></div>
-
-
-    <div class="container_col_gray2"><h4><b>Data sources for WEATHER table</h4></b> </div>
-    <div class="container_col">
-        <p>
-          We have included or currently working on including the following sources:
-        </p>
-      <table class="table">
-          <tr>
-            <th>Source</th>
-            <th>Granularity</th>
-          </tr>
-          <tr>
-            <td><a href="https://www.informaticslab.co.uk/">Met Office Informatics LAB</a></td>
-            <td>regional weather information</td>
-          </tr>
-        </table>
-      </div>
 
 
 
