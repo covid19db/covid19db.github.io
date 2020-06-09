@@ -44,7 +44,7 @@
 
   <div class="container_col_gray1"><center><h2>Data Structures for OxCOVID19 Database</center></h2></div>
 
-    <div class="container_col_gray2"><h4><b>Schema for EPIDEMIOLOGY table and CSV files</b></h4></div>
+    <div class="container_col_gray2"><h4><b>Schema for EPIDEMIOLOGY table</b></h4></div>
 
     <div class="container_col">
     <table class="table table-bordered">
@@ -204,11 +204,71 @@
 
 
 
+      <div class="container_col_gray2"><h4><b>Schema for COUNTRY_STATISTICS table</b></h4></div>
+
+      <div class="container_col">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Data type</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SOURCE</td>
+            <td>VARCHAR</td>
+            <td>Data source</td>
+          </tr>
+          <tr>
+            <td>YEAR</td>
+            <td>INT</td>
+            <td>Day of the statistics</td>
+          </tr>
+          <tr>
+            <td>GID</td>
+            <td>ARRAY</td>
+            <td>Unique geographical ID, for more details see <a href="https://gadm.org"> GADM</a></td>
+          </tr>
+          <tr>
+            <td>COUNTRY</td>
+            <td>VARCHAR</td>
+            <td>English name for the country</td>
+          </tr>
+          <tr>
+            <td>COUNTRYCODE</td>
+            <td>VARCHAR(3)</td>
+            <td>ISO 3166-1 alpha-3 country codes</td>
+          </tr>
+          <tr>
+            <td>ADM_LEVEL</td>
+            <td>VARCHAR</td>
+            <td>Aggregation level, 0 for World Bank and Integrated Value Survey by country, 1 for Integrated Value Survey by region</td>
+          </tr>
+          <tr>
+            <td>SAMPLESIZE</td>
+            <td>VARCHAR</td>
+            <td>Number of questions for Integrated Value Survey, -1 for World Bank</td>
+          </tr>
+          <tr>
+            <td>PROPERTIES</td>
+            <td>VARCHAR</td>
+            <td>Dictionary containing the region/country statistics.
+              For the full details on 
+              included variables consider the hyperlink above</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
 
 
 
 
-    <div class="container_col_gray2"><h4><b>Schema for MOBILITY table and CSV file</b></h4></div>
+
+
+
+    <div class="container_col_gray2"><h4><b>Schema for MOBILITY table</b></h4></div>
 
 
     <div class="container_col">
