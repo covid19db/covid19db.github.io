@@ -472,6 +472,15 @@
 
 
     <div class="container_col_gray2"><h4><b>Schema for WEATHER table</b></h4></div>
+<div class="container_col">
+We aggregated the daily weather data from <a href="https://www.informaticslab.co.uk/">Met Office Informatics LAB</a>
+(for more details see <a href="news.html">Data Sources</a>)
+at the second <a href="https://gadm.org"> GADM</a> level for every country
+in the World. For each Level-2 GID region all the points in the grid that are contained in the region
+have been located. Then for a fixed Level-2 GID region and given variable (e.g. maximum daily precipitation,
+minimum daily temperature etc.) the average and standard deviation of the considered variable in
+those grid points is reported.
+</div>
 
     <div class="container_col">
     <table class="table table-bordered">
@@ -506,169 +515,169 @@
         <tr>
           <td>PRECIP_MAX_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily maximum precipitation</td>
         </tr>
         <tr>
           <td>PRECIP_MAX_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily maximum precipitation </td>
         </tr>
         <tr>
           <td>PRECIP_MEAN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily mean precipitation</td>
         </tr>
         <tr>
           <td>PRECIP_MEAN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily mean precipitation </td>
         </tr>
 
         <tr>
           <td>SPECIFIC_HUMIDITY_MAX_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily maximum specific humidity</td>
         </tr>
         <tr>
           <td>SPECIFIC_HUMIDITY_MAX_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily maximum specific humidity</td>
         </tr>
         <tr>
           <td>SPECIFIC_HUMIDITY_MEAN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily mean specific humidity</td>
         </tr>
         <tr>
           <td>SPECIFIC_HUMIDITY_MEAN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily mean specific humidity</td>
         </tr>
         <tr>
           <td>SPECIFIC_HUMIDITY_MIN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily minimum specific humidity</td>
         </tr>
         <tr>
           <td>SPECIFIC_HUMIDITY_MIN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily minimum specific humidity</td>
         </tr>
 
         <tr>
           <td>SHORT_WAVE_RADIATION_MAX_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily maximum short wave radiation</td>
         </tr>
         <tr>
           <td>SHORT_WAVE_RADIATION_MAX_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily maximum short wave radiation</td>
         </tr>
         <tr>
           <td>SHORT_WAVE_RADIATION_MEAN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily minimum short wave radiation</td>
         </tr>
         <tr>
           <td>SHORT_WAVE_RADIATION_MEAN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily minimum short wave radiation</td>
         </tr>
 
         <tr>
           <td>TEMPERATURE_MAX_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily maximum temperature</td>
         </tr>
         <tr>
           <td>TEMPERATURE_MAX_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily maximum temperature</td>
         </tr>
         <tr>
           <td>TEMPERATURE_MEAN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily mean temperature</td>
         </tr>
         <tr>
           <td>TEMPERATURE_MEAN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily mean temperature</td>
         </tr>
         <tr>
           <td>TEMPERATURE_MIN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily minimum temperature</td>
         </tr>
         <tr>
           <td>TEMPERATURE_MIN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily minimum temperature </td>
         </tr>
 
 
         <tr>
           <td>WINDGUST_MAX_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily maximum wind gust</td>
         </tr>
         <tr>
           <td>WINDGUST_MAX_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily maximum wind gust</td>
         </tr>
         <tr>
           <td>WINDGUST_MEAN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily mean wind gust</td>
         </tr>
         <tr>
           <td>WINDGUST_MEAN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily mean wind gust</td>
         </tr>
         <tr>
           <td>WINDGUST_MIN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily minimum wind gust</td>
         </tr>
         <tr>
           <td>WINDGUST_MIN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily minimum wind gust</td>
         </tr>
 
 
         <tr>
           <td>WINDSPEED_MAX_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily maximum wind speed</td>
         </tr>
         <tr>
           <td>WINDSPEED_MAX_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily maximum wind speed</td>
         </tr>
         <tr>
           <td>WINDSPEED_MEAN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily mean wind speed</td>
         </tr>
         <tr>
           <td>WINDSPEED_MEAN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily mean wind speed</td>
         </tr>
         <tr>
           <td>WINDSPEED_MIN_AVG</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Average of the daily minimum wind speed</td>
         </tr>
         <tr>
           <td>WINDSPEED_MIN_STD</td>
           <td>FLOAT</td>
-          <td></td>
+          <td>Standard deviation of the daily minimum wind speed</td>
         </tr>
 
       </tbody>
