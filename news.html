@@ -67,7 +67,7 @@
              <td>Argentina</td>
              <td>LAT_DSRP</td>
              <td><a href="https://github.com/DataScienceResearchPeru/covid-19_latinoamerica">covid-19_latinoamerica</a></td>
-             <td>confirmed,  , recovered</td>
+             <td>confirmed, dead, ecovered</td>
              <td><a href="https://github.com/DataScienceResearchPeru/covid-19_latinoamerica">CC BY-NC-SA 4.0</a></td>
            </tr>
 
@@ -75,7 +75,7 @@
              <td>Australia</td>
              <td>AUS_C1A</td>
              <td><a href="https://github.com/covid-19-au/covid-19-au.github.io">covid-19-au</a></td>
-             <td>confirmed,  , recovered</td>
+             <td>tested, confirmed, dead,recovered, hospitalised, hospitalised_icu</td>
              <td><a href="https://github.com/covid-19-au/covid-19-au.github.io">For educational and academic research purposes</a></td>
            </tr>
 
@@ -410,6 +410,8 @@
 
 
 
+
+
        <div class="container_col_gray2"><h4><b>Data sources for GOVERMENT_RESPONSE table</h4></b> </div>
        <div class="container_col">
            <p>
@@ -418,15 +420,13 @@
          <table class="table">
              <tr>
                <th>Source</th>
-               <th>Source code</th>
-               <th>Granularity</th>
                <th>Example Features</th>
+               <th>Terms of Use</th>
              </tr>
              <tr>
                <td><a href="https://www.bsg.ox.ac.uk/research/research-projects/oxford-covid-19-government-response-tracker"> Oxford COVID-19 government response tracker</a></td>
-               <td>GOVERNMENT_RESPONSE</td>
-               <td>country-level</td>
                <td>SchoolClosing, WorkplaceClosing, CancelPublicEvents, ClosePublicTransport</td>
+             <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/LICENSE.txt">CC BY 4.0</a></td>
              </tr>
            </table>
          </div>
@@ -444,20 +444,20 @@
              <tr>
                <th>Source</th>
                <th>Source code</th>
-               <th>Granularity</th>
                <th>Features</th>
+               <th>Terms of Use</th>
              </tr>
              <tr>
                <td><a href="https://www.google.com/covid19/mobility/">Google COVID-19 Community Mobility Reports</a></td>
                <td>GOOGLE_MOBILITY</td>
-               <td>regional information</td>
-               <td>transit_stations, residential, workplace, parks, retail_recreation, grocery farmacy</td>
+              <td>transit_stations, residential, workplace, parks, retail_recreation, grocery farmacy</td>
+              <td><a href="https://www.google.com/help/terms_maps/?hl=en">Attribution required</a></td>
              </tr>
              <tr>
                <td><a href="https://www.apple.com/covid19/mobility">Apple Mobility Trends Reports</a></td>
                <td>APPLE_MOBILITY</td>
-               <td>regional information</td>
                <td>driving, walking, transit</td>
+              <td><a href="https://www.apple.com/covid19/mobility">Attribution required</a></td>
              </tr>
            </table>
          </div>
@@ -475,11 +475,13 @@
          <table class="table">
              <tr>
                <th>Source</th>
-               <th>Granularity</th>
+               <th>Example Features</th>
+               <th>Terms of Use</th>
              </tr>
              <tr>
                <td><a href="https://www.informaticslab.co.uk/">Met Office Informatics LAB</a></td>
-               <td>regional weather information</td>
+               <td>PRECIP_MAX_AVG, TEMPERATURE_MAX_AVG, WINDSPEED_MAX_AVG</td>
+               <td><a href=""></a></td>
              </tr>
            </table>
          </div>
