@@ -6,6 +6,15 @@ body{
   background-color: #ffffff;
 }
 
+.my_citation{
+  background-color: #EBEDEF;
+  width: 100%;
+  float:right;
+  padding: 10px 10px 10px 10px;
+  margin-left: 0px;
+  border: 1.5px solid #f4f4f4;
+}
+
 .on_this_page{
   background-color: #f4f4f4;
   width: 40%;
