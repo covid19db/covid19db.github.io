@@ -195,9 +195,91 @@
             <td>Third-level administrative country subdivision</td>
           </tr>
           <tr>
-            <td>ACTIONS</td>
-            <td>SINGLE ACTION</td>
-            <td>List of applied actions</td>
+
+            <tr>
+              <td>ADM_AREA_3</td>
+              <td>VARCHAR</td>
+              <td>Third-level administrative country subdivision</td>
+            </tr>
+            <tr>
+
+            <tr>
+              <td>c1_school_closing </td>
+              <td>int</td>
+              <td>Record closings of schools and universities</td>
+            </tr>
+
+            <tr>
+              <td>c1_flag </td>
+              <td>int</td>
+              <td>Binary flag for geographic scope</td>
+            </tr>
+
+            <tr>
+              <td>c2_workplace_closing</td>
+              <td>int</td>
+              <td>Record closings of workplaces</td>
+            </tr>
+
+            <tr>
+              <td>c2_flag</td>
+              <td>int</td>
+              <td>Binary flag for geographic scope</td>
+            </tr>
+
+            <tr>
+              <td>c3_cancel_public_events</td>
+              <td>int</td>
+              <td>Record cancelling public events</td>
+            </tr>
+
+            <tr>
+              <td>c3_flag</td>
+              <td>int</td>
+              <td>Binary flag for geographic scope</td>
+            </tr>
+
+            <tr>
+              <td>c4_restrictions_on_gatherings</td>
+              <td>int</td>
+              <td>Record limits on private gatherings</td>
+            </tr>
+
+            <tr>
+              <td>c4_flag</td>
+              <td>int</td>
+              <td>Binary flag for geographic scope</td>
+            </tr>
+
+            <tr>
+              <td>c5_close_public_transport</td>
+              <td>int</td>
+              <td>Record closing of public transport</td>
+            </tr>
+
+            <tr>
+              <td>c5_flag</td>
+              <td>int</td>
+              <td>Binary flag for geographic scope</td>
+            </tr>
+
+            <tr>
+              <td>c6_stay_at_home_requirements</td>
+              <td>int</td>
+              <td>Record orders to "shelter-in-place" and otherwise confine to the home</td>
+            </tr>
+
+            <tr>
+              <td>c6_flag</td>
+              <td>int</td>
+              <td>Binary flag for geographic scope</td>
+            </tr>
+
+            <tr>
+            <td>Actions</td>
+            <td>jsonb</td>
+            <td>Raw response from Covid Tracker API containing all above
+              indicators with full description stored in JSON format.</td>
           </tr>
         </tbody>
       </table>
