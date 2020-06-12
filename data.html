@@ -361,9 +361,76 @@
             </tr>
 
             <tr>
+              <td>m1_wildcard</td>
+              <td>varchar</td>
+              <td>Record policy announcements that do not fit anywhere else</td>
+            </tr>
+
+            <tr>
+              <td>stringency_index</td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
+              <td>stringency_indexfordisplay</td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
+              <td>stringency_legacy_index</td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
+              <td>stringency_legacy_indexfordisplay </td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
+              <td>government_response_index</td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
+              <td>government_response_index_for_display</td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
+              <td>containment_health_index</td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
+              <td>containment_health_index_for_display</td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
+              <td>economic_support_index</td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
+              <td>economic_support_index_for_display</td>
+              <td>float</td>
+              <td><a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/index_methodology.md#dealing-with-gaps-in-the-data-for-display-purposes">Calculated as a function of the individual indicators</a></td>
+            </tr>
+
+            <tr>
             <td>Actions</td>
             <td>jsonb</td>
-            <td>Raw response from Covid Tracker API containing all above
+            <td>Raw response from Covid Tracker API <a href="https://covidtracker.bsg.ox.ac.uk/about-api">Covid Tracker API</a><
+              containing all above
               indicators with full description stored in JSON format</td>
           </tr>
         </tbody>
