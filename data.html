@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
   <header>
   <div class="container_col">
     <div class="browser">
@@ -40,12 +39,27 @@
 </header>
 
 
+<div class="container_col_gray1"><center><h2>Data Structures for OxCOVID19 Database</center></h2></div>
 
 
+<!---------------------------------------------------------------->
+<!-- Table of Contents: first 4 letters of the key word are used-->
+<div class="container_col">
+  <div class="on_this_page">
+  <ul>
+    <li><a href="#epi">Schema for EPIDEMIOLOGY</a></li>
+    <li><a href="#gov">Schema for GOVERNMENT_RESPONSE</a></li>
+    <li><a href="#cou">Schema for COUNTRY_STATISTICS</a></li>
+    <li><a href="#mob">Schema for MOBILITY</a></li>
+    <li><a href="#adm">Schema for ADMINISTRATIVE_DIVISION</a></li>
+    <li><a href="#wea">Schema for WEATHER</a></li>
+  </ul>
+  </div>
+</div>
+<!---------------------------------------------------------------->
 
-  <div class="container_col_gray1"><center><h2>Data Structures for OxCOVID19 Database</center></h2></div>
 
-    <div class="container_col_gray2"><h4><b>Schema for EPIDEMIOLOGY table</b></h4></div>
+    <div class="container_col_gray2" id="epi"><h4><b>Schema for EPIDEMIOLOGY table</b></h4></div>
 
     <div class="container_col">
     <table class="table table-bordered">
@@ -136,7 +150,7 @@
     </table>
     </div>
 
-  <div class="container_col_gray2"><h4><b>Schema for GOVERNMENT_RESPONSE table</b></h4></div>
+  <div class="container_col_gray2" id="gov"><h4><b>Schema for GOVERNMENT_RESPONSE table</b></h4></div>
       <div class="container_col">
       The government response data comes from the <a href="https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker">Coronavirus Government Response Tracker</a> assembled
       by researchers from the Blavatnik School of Government, University of Oxford. The data are being collected from publicly available sources including news articles
@@ -437,7 +451,7 @@
 
 
 
-      <div class="container_col_gray2"><h4><b>Schema for COUNTRY_STATISTICS table</b></h4></div>
+      <div class="container_col_gray2" id="cou"><h4><b>Schema for COUNTRY_STATISTICS table</b></h4></div>
 
       <div class="container_col">
       <table class="table table-bordered">
@@ -501,7 +515,7 @@
 
 
 
-    <div class="container_col_gray2"><h4><b>Schema for MOBILITY table</b></h4></div>
+    <div class="container_col_gray2" id="mob"><h4><b>Schema for MOBILITY table</b></h4></div>
 
 
     <div class="container_col">
@@ -606,7 +620,7 @@
     </div>
 
 
-    <div class="container_col_gray2"><h4><b>Schema for ADMINISTRATIVE_DIVISION table</b></h4></div>
+    <div class="container_col_gray2" id="adm"><h4><b>Schema for ADMINISTRATIVE_DIVISION table</b></h4></div>
 
     <div class="container_col">
     <table class="table table-bordered">
@@ -703,7 +717,7 @@
 
 
 
-    <div class="container_col_gray2"><h4><b>Schema for WEATHER table</b></h4></div>
+    <div class="container_col_gray2" id="wea"><h4><b>Schema for WEATHER table</b></h4></div>
 <div class="container_col">
 We aggregated the daily weather data from <a href="https://www.informaticslab.co.uk/">Met Office Informatics LAB</a>
 (for more details see <a href="news.html">Data Sources</a>)
