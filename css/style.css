@@ -6,6 +6,31 @@ body{
   background-color: #ffffff;
 }
 
+.on_this_page{
+  background-color: #f4f4f4;
+  width: 40%;
+  float:right;
+  padding: 0px 0px 15px 10px;
+  margin-left: 20px;
+  border: 2px solid #f4f4f4;
+}
+
+.on_this_page ul{
+  margin-top: 5px;
+  padding-top: 0px;
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.on_this_page h3{
+text-align: center;
+}
+
+.on_this_page h4{
+  margin-bottom: 0px;
+}
+
+
 .container_col_gray1{
   width:70%;
   margin: auto;
