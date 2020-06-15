@@ -21,7 +21,19 @@ body{
   margin-top: 10px;
   margin-bottom: 10px;
   overflow: hidden;
-  background: #FBEEE6 ;
+  background: #FBEEE6;
+  border: 1px solid darkgray;
+  padding: 5px;
+  padding-left: 20px;
+}
+
+.my_citation3{
+  width:100%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #EBF5FB;
   border: 1px solid darkgray;
   padding: 5px;
   padding-left: 20px;
@@ -84,12 +96,12 @@ text-align: center;
 }
 
 .container_col_gray4{
-  width:90%;
+  width:100%;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   overflow: hidden;
-  background: #EBF5FB;
+  background: #FBEEE6;
   padding: 10px;
   padding-left: 40px;
 }
