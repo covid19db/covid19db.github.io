@@ -21,7 +21,7 @@ body{
   margin-top: 10px;
   margin-bottom: 10px;
   overflow: hidden;
-  background: #f4f4f4;
+  background: #FBEEE6 ;
   border: 1px solid darkgray;
   padding: 10px;
   padding-left: 40px;
@@ -83,6 +83,16 @@ text-align: center;
   padding-left: 40px;
 }
 
+.container_col_gray4{
+  width:90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #EBF5FB;
+  padding: 10px;
+  padding-left: 40px;
+}
 .container_col{
   width:70%;
   margin: auto;

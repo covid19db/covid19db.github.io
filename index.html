@@ -55,12 +55,11 @@
               strategies to reduce the impact on the society through the combined power of Statistical, Mathematical Modelling
               and Machine Learning techniques.<p>
 
-              <p><b>OxCOVID19 Database</b> is a large, single-centre, multimodal database consisting of information (using acknowledged <a href="data_sources.html">data sources</a>) related to COVID-19 pandemic.
-                OxCOVID19 Database is currenlty comprised of <a href="data_schema.html">six tables</a> with a common key, combining different types of data and making it easy to query.</p>
+              <p><b>OxCOVID19 Database</b> is a large, single-centre, multimodal relational database consisting of information (using acknowledged <a href="data_sources.html">data sources</a>) related to COVID-19 pandemic.
+                OxCOVID19 Database is currenlty comprised of six tables: EPIDEMIOLOGY, MOBILITY, GOVERNMENT_RESPONSE,
+          COUNTRY STATISTICS, WEATHER and ADMINISTRATIVE_DIVISION. Read more about the <a href="data_schema.html">Data Structure</a> and <a href="data_sources.html">Sources</a>; and how to access the data below.
 
-                <br>
-
-                <div class="my_citation">
+                <div class="my_citation2">
                   <p>If you find <b>OxCOVID19 Database</b> useful please cite:</p>
                   <p>Adam Mahdi, Piotr Błaszczyk, Paweł Dłotko, Dario Salvi, Tak-Shing Chan, John Harvey, Davide Gurnari, Yue Wu, Ahmad Farhat, Niklas Hellmer, Alexander Zarebski, Bernie Hogan, Lionel Tarassenko,
               <em>Oxford COVID-19 Database: a multimodal data repository for better understanding the global impact of COVID-19.</em> University of Oxford, 2020.</p>
@@ -92,78 +91,37 @@
  </div>
 
 
+
+<!--       ACCESSING OxCOVID-19 Database      -->
  <div class="container_col_gray2"><h4><b>Accessing OxCOVID19 Database</b></h4></div>
- <div class="container_col">
-      You can access OxCOVID19 database in two ways. Connecting to the public <b>PostgreSQL database</b>, e.g. using the following code
- </div>
-
- <div class="container_col">
-    <!-- HTML generated using hilite.me -->
-  <div style="background: #ffffff; overflow:auto;width:auto;;border-width:.1em .1em .1em .8em; padding:.2em .6em;">
-    <pre style="margin: 0; line-height: 125%">
-
-    <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">psycopg2</span>
-    <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pandas</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">pd</span>
-
-    conn <span style="color: #333333">=</span> psycopg2<span style="color: #333333">.</span>connect(
-    host<span style="color: #333333">=</span><span>&#39;covid19db.org&#39;</span>,
-    port<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5432</span>,
-    dbname<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
-    user<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>,
-    password<span style="color: #333333">=</span><span>&#39;covid19&#39;</span>
-    )
-    cur <span style="color: #333333">=</span> conn<span style="color: #333333">.cursor()</span>
-
-   <span style="color: #008800"> # load EPIDEMIOLOGY table</span>
-    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM epidemiology LIMIT 100;&quot;</span>)
-    df_epidemiology <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
-
-   <span style="color: #008800"> # load MOBILITY table</span>
-    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM mobility LIMIT 100;&quot;</span>)
-    df_mobility <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
-
-    <span style="color: #008800"># load GOVERNMENT_REPONSE table</span>
-    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM government_response LIMIT 100;&quot;</span>)
-    df_govres <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
-
-    <span style="color: #008800"># load COUNTRY STATISTICS table</span>
-    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM country_statistics LIMIT 100;&quot;</span>)
-    df_govres <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
-
-    <span style="color: #008800"># load WEATHER table</span>
-    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM weather LIMIT 100;&quot;</span>)
-    df_govres <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
-
-    <span style="color: #008800"># load ADMINISTRATIVE_DIVISION table</span>
-    cur<span style="color: #333333">.</span>execute(<span>&quot;SELECT * FROM administrative_division LIMIT 100;&quot;</span>)
-    df_admin <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>DataFrame(cur<span style="color: #333333">.</span>fetchall(), columns<span style="color: #333333">=</span>[desc[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #008800; font-weight: bold">for</span> desc <span style="color: #000000; font-weight: bold">in</span> cur<span style="color: #333333">.</span>description])
-
-    </pre>
-  </div>
- </div>
 
 
  <div class="container_col">
-  <p>or download <b>CSV files</b> from the GitHub repository</p>
- </div>
- <div class="container_col_gray2">
-    <a href="https://github.com/covid19db/covid19db-data/tree/master/data-epidemiology">CSV files for Epidemiology data</a> </br>
-    <a href="https://github.com/covid19db/data/tree/master/data-government-response">CSV files for Government Response data</a></br>
-    <a href="https://github.com/covid19db/covid19db-data/tree/master/data-mobility">CSV files for Mobility data</a>
+    You can access OxCOVID19 Database in two ways
+
+     <div class="container_col_gray4">
+    <ul>
+          <li>Connecting to <b>PostgreSQL database</b>: see an example in <a href="https://github.com/covid19db/examples/blob/master/data-loading/data-access-postgresql.ipynb">Jupyter Notebook how to connect to the database.</a></li>
+          <li>Downloading <b>CSV files</b> from our <a href="https://github.com/covid19db/data">GitHub repository</a>: see an example in <a href="https://github.com/covid19db/examples/blob/master/data-loading/data-access-csv.ipynb">Jupyter Notebook how to load the data from the CSV files.</a></li>
+    </ul>
+    </div>
+    Note that currently only a subset of the total data collected in our PostgreSQL database has been made available as CSV files.
  </div>
 
 
 
 
  <div class="container_col">
-    You can learn more about the <a href="data_schema.html">Data Structure</a> and <a href="data_sources.html">Sources</a>.
+    </a>.
  </div>
 
 
  <div class="container_col_gray2"><h4><b>Examples of how to use OxCOVID19 database</b></h4></div>
 
  <div class="container_col">
-   Examples of how to load and query OxCOVID19 database and make simple visualisations in Jupyter notebook (Python). For more examples see our  <a href="https://github.com/covid19db/examples">GitHub repository</a>. Feel free to get in touch if you would like to suggest or send us an informative visualisation usign COVID19DB.</br></br>
+   Examples of how to load and query OxCOVID19 database and make simple visualisations in Jupyter notebook (Python).
+   For more examples see our  <a href="https://github.com/covid19db/examples">GitHub repository</a>.
+   Feel free to get in touch if you would like to suggest or send us an informative visualisation usign COVID19DB.</br></br>
    <div class="row">
      <div class="col-xs-5 col-sm-3"> <div class="box"><a href="https://github.com/covid19db/examples/tree/master/data-plots/confirmed-and-deaths.ipynb"><img src="images/fig_jupyter_compare.png" class="img-responsive"></a></div></div>
      <div class="col-xs-7 col-sm-9"><b>Comparing different countries.</b> An example of how to use EPIDEMIOLOGY table within OxCOVID19 database to plot a simple comparison of confirmed cases and mortality between different countries.<div class="container_text"><br></div>
